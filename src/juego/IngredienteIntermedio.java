@@ -18,4 +18,14 @@ public class IngredienteIntermedio extends Ingrediente {
 		return this.receta.getIngredienteCompleto();
 	}
 
+	@Override
+	public Boolean esIngredienteBasico() {
+		return false;
+	}
+
+	@Override
+	public String getRecetaCompleta(Integer cant) {
+		return this.receta.getIngredienteCompleto(cant);
+	}
+
 }

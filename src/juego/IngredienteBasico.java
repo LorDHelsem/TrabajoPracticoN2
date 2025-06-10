@@ -16,4 +16,14 @@ public class IngredienteBasico extends Ingrediente {
 		return this.getReceta();
 	}
 
+	@Override
+	public Boolean esIngredienteBasico() {
+		return true;
+	}
+
+	@Override
+	public String getRecetaCompleta(Integer cant) {
+		return this.getReceta();
+	}
+
 }

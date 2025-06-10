@@ -10,16 +10,22 @@ public class App {
 		IngredienteBasico i4 = new IngredienteBasico("Pollo");
 		IngredienteBasico i5 = new IngredienteBasico("Arroz");
 
-		Receta ensaladaReceta = new Receta("Ensalada", 25.5, Map.entry(i1, 1), Map.entry(i2, 1), Map.entry(i3, 1));
+		Receta ensaladaReceta = new Receta("Ensalada", 25.5, Map.entry(i1, 2), Map.entry(i2, 3), Map.entry(i3, 1));
 		IngredienteIntermedio ensaladaIngrediente = new IngredienteIntermedio("Ensalada", ensaladaReceta);
 
-		Receta platoComunReceta = new Receta("Arroz con Pollo", 25.5, Map.entry(ensaladaIngrediente, 1),
-				Map.entry(i4, 1), Map.entry(i5, 1));
-		IngredienteIntermedio platoComunIngrediente = new IngredienteIntermedio("Arroz con Pollo y con Ensalada",
-				platoComunReceta);
+		Receta platoComunReceta = new Receta("Arroz con Pollo", 25.5, Map.entry(i4, 2), Map.entry(i5, 1));
+		IngredienteIntermedio platoComunIngrediente = new IngredienteIntermedio("Arroz con Pollo", platoComunReceta);
 
-		System.out.println(platoComunIngrediente.getNombre());
-		System.out.println(platoComunIngrediente.getRecetaCompleta());
+		Receta platoComunFinalReceta = new Receta("Arroz con Pollo y con Ensalada", 25.5,
+				Map.entry(platoComunIngrediente, 5), Map.entry(ensaladaIngrediente, 2));
+		IngredienteIntermedio platoComunFinalIngrediente = new IngredienteIntermedio("Arroz con Pollo y con Ensalada",
+				platoComunFinalReceta);
+
+		System.out.println(platoComunFinalIngrediente.getNombre());
+
+		System.out.println(platoComunFinalIngrediente.getReceta());
+
+		System.out.println(platoComunFinalIngrediente.getRecetaCompleta());
 
 	}
 }
