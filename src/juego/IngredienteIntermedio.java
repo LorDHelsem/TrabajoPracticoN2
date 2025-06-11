@@ -8,24 +8,24 @@ public class IngredienteIntermedio extends Ingrediente {
 		this.receta = receta;
 	}
 
-	@Override
 	public String getReceta() {
 		return this.receta.getIngredientes();
 	}
 
-	@Override
 	public String getRecetaCompleta() {
 		return this.receta.getIngredienteCompleto();
+	}
+
+	protected String getRecetaCompleta(Integer cant, Integer cantTabs) {
+		return this.receta.getIngredienteCompleto(cant, cantTabs);
+	}
+
+	public double getTiempoDePreparacion() {
+		return this.receta.getTiempo();
 	}
 
 	@Override
 	public Boolean esIngredienteBasico() {
 		return false;
 	}
-
-	@Override
-	public String getRecetaCompleta(Integer cant) {
-		return this.receta.getIngredienteCompleto(cant);
-	}
-
 }

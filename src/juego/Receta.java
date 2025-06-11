@@ -11,10 +11,14 @@ public class Receta {
 	@SafeVarargs
 	public Receta(String nombre, double tiempo, Map.Entry<Ingrediente, Integer>... ingredientes) {
 		this.nombre = nombre;
-		this.tiempo = tiempo;
+		double tiempoAuxiliar = 0;
 		for (Map.Entry<Ingrediente, Integer> entry : ingredientes) {
 			this.ingredientes.put(entry.getKey(), entry.getValue());
+			if (!entry.getKey().esIngredienteBasico()) {
+				tiempoAuxiliar += ((IngredienteIntermedio) entry.getKey()).getTiempoDePreparacion() * entry.getValue();
+			}
 		}
+		this.tiempo = Double.compare(tiempoAuxiliar, 0) == 0 ? tiempo : tiempoAuxiliar;
 	}
 
 	public String getNombre() {
@@ -27,43 +31,41 @@ public class Receta {
 
 	public String getIngredientes() {
 		StringBuilder retorno = new StringBuilder();
+		retorno.append(this.getNombre() + " " + this.getTiempo() + " " + "Minutos" + "\n");
 		for (Map.Entry<Ingrediente, Integer> entry : this.ingredientes.entrySet()) {
 			Ingrediente ingrediente = entry.getKey();
 			Integer cantidad = entry.getValue();
-			retorno.append(ingrediente.getNombre() + " " + cantidad + "\n");
+			retorno.append("\t" + ingrediente.getNombre() + " " + cantidad);
+			if (ingrediente.esIngredienteBasico()) {
+				retorno.append("\n");
+			} else {
+				retorno.append(" " + ((IngredienteIntermedio) ingrediente).getTiempoDePreparacion() * cantidad + " "
+						+ "Minutos" + "\n");
+			}
 		}
 		return retorno.toString();
 	}
 
 	public String getIngredienteCompleto() {
 		StringBuilder retorno = new StringBuilder();
-		for (Map.Entry<Ingrediente, Integer> entry : this.ingredientes.entrySet()) {
-			Ingrediente ingrediente = entry.getKey();
-			Integer cantidad = entry.getValue();
-
-			if (ingrediente.esIngredienteBasico()) {
-				retorno.append(ingrediente.getReceta() + " " + cantidad + "\n");
-			} else {
-				if (cantidad > 1) {
-					retorno.append(ingrediente.getRecetaCompleta(cantidad));
-				} else {
-					retorno.append(ingrediente.getRecetaCompleta());
-				}
-			}
-		}
+		retorno.append(this.getNombre() + " " + this.getTiempo() + " " + "Minutos" + "\n");
+		retorno.append(this.getIngredienteCompleto(1, 1));
 		return retorno.toString();
 	}
 
-	public String getIngredienteCompleto(Integer cant) {
+	protected String getIngredienteCompleto(Integer cant, Integer cantTabs) {
 		StringBuilder retorno = new StringBuilder();
 		for (Map.Entry<Ingrediente, Integer> entry : this.ingredientes.entrySet()) {
 			Ingrediente ingrediente = entry.getKey();
 			Integer cantidad = entry.getValue();
-
+			retorno.append("\t".repeat(cantTabs));
 			if (ingrediente.esIngredienteBasico()) {
-				retorno.append(ingrediente.getReceta() + " " + cantidad * cant + "\n");
+				retorno.append(ingrediente.getNombre() + " " + cantidad * cant + "\n");
 			} else {
-				retorno.append(ingrediente.getRecetaCompleta(cantidad * cant));
+				retorno.append(ingrediente.getNombre() + " " + cantidad * cant + " "
+						+ ((IngredienteIntermedio) ingrediente).getTiempoDePreparacion() * cantidad * cant + " "
+						+ "Minutos" + "\n");
+				retorno.append(((IngredienteIntermedio) ingrediente).getRecetaCompleta(cantidad * cant, cantTabs + 1));
 			}
 		}
 		return retorno.toString();
