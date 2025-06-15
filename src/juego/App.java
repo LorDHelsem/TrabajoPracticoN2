@@ -30,15 +30,17 @@ public class App {
 		IngredienteIntermedio platoComunFinalIngrediente = new IngredienteIntermedio("Arroz con Pollo y con Ensalada",
 				platoComunFinalReceta);
 
-		System.out.println("Obtener receta basica\n");
+		System.out.println("- 1. Obtener receta (solo el primer nivel de la receta, sin descomponer los ingredientes):");
 		System.out.println(platoComunFinalIngrediente.getReceta());
-		System.out.println("Obtener receta Completa\n");
-		System.out.println(platoComunFinalIngrediente.getArbolCompleto());
-		System.out.println(platoComunFinalIngrediente.getTiempoDePreparacion());
+		
+		System.out.println("- 2. Obtener Receta completa (mostrar solo los elementos basicos necesarios, con sus cantidades totales):");
+		//System.out.println(platoComunFinalIngrediente.getTiempoDePreparacion());
 		System.out.println(platoComunFinalIngrediente.getRecetaCompleta());
 		
-		Registro reg = new Registro();
+		System.out.println("- Bonus. Obtener Arbol de crafteo (Cantidad y tiempo de cada ingrediente):");
+		System.out.println(platoComunFinalIngrediente.getArbolCompleto());
 		
+		Registro reg = new Registro();
 		reg.agregarRegistroTemporal(platoComunFinalIngrediente.getReceta());
 		reg.guardarRegistroTemporal();
 	}

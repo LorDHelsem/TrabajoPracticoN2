@@ -6,5 +6,10 @@ public abstract class Ingrediente extends Item {
 		super(nombre);
 	}
 	public abstract Boolean esIngredienteBasico();
+	
+	@Override
+	public String toString() {
+	    return getNombre();
+	}
 
 }

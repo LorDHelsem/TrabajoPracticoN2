@@ -1,6 +1,7 @@
 package juego;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Receta {
@@ -23,6 +24,10 @@ public class Receta {
 			}
 		}
 		this.tiempoTotal = Double.compare(tiempoAuxiliar, 0) == 0 ? tiempo : tiempoAuxiliar;
+	}
+
+	public Receta(String nombre2, List<Ingrediente> ingredientes2, double tiempo, Ingrediente produccion) {
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getNombre() {
