@@ -22,7 +22,12 @@ public class Registro {
 		historial.add(LocalDateTime.now().getHour() + " : " + LocalDateTime.now().getMinute() + " : "
 				+ LocalDateTime.now().getSecond() + "\n" + registro);
 	}
-
+	/*
+	 * 2 opciones 
+	 * A un HISTORIAL_DE_CRAFTEO_(fecha del dia).txt adentro tiene las horas de esa fecha de cada crafteo
+	 * B un HISTORIAL_DE_CRAFTEO.txt adentro fecha hora de cada crafteo
+	 * */
+	
 	public void guardarRegistroTemporal() {
 		try {
 			fileArch = new FileWriter(PATH + NOMBRE, true);

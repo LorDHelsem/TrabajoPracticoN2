@@ -16,12 +16,24 @@ public class IngredienteIntermedio extends Ingrediente {
 		return this.receta.getIngredienteCompleto();
 	}
 
-	protected String getRecetaCompleta(Integer cant, Integer cantTabs) {
-		return this.receta.getIngredienteCompleto(cant, cantTabs);
+	public String getRecetaCompleta(Integer cant) {
+		return this.receta.getIngredienteCompleto(cant);
+	}
+
+	public String getArbolCompleto() {
+		return this.receta.getArbolDeCrafteo();
+	}
+
+	protected String getArbolCompleto(Integer cant, Integer cantTabs) {
+		return this.receta.getArbolDeCrafteo(cant, cantTabs);
 	}
 
 	public double getTiempoDePreparacion() {
 		return this.receta.getTiempo();
+	}
+
+	public double getTiempoDePreparacionTotal() {
+		return this.receta.getTiempoTotal();
 	}
 
 	@Override

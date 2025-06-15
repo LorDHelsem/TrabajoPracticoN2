@@ -1,0 +1,410 @@
+{
+  "recetas": [
+    {
+      "nombre": "queso",
+      "ingredientes": [
+        {
+          "item": "leche",
+          "cantidad": 2
+        },
+        {
+          "item": "sal",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 3,
+      "produce": {
+        "item": "queso",
+        "cantidad": 1
+      }
+    },
+    {
+      "nombre": "masa",
+      "ingredientes": [
+        {
+          "item": "harina",
+          "cantidad": 3
+        },
+        {
+          "item": "levadura",
+          "cantidad": 1
+        },
+        {
+          "item": "aceite",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 5,
+      "produce": {
+        "item": "masa",
+        "cantidad": 2
+      }
+    },
+    {
+      "nombre": "salsa de tomate",
+      "ingredientes": [
+        {
+          "item": "tomate",
+          "cantidad": 3
+        },
+        {
+          "item": "aceite",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 8,
+      "produce": {
+        "item": "salsa de tomate",
+        "cantidad": 2
+      }
+    },
+    {
+      "nombre": "pizza muzzarella",
+      "ingredientes": [
+        {
+          "item": "masa",
+          "cantidad": 1
+        },
+        {
+          "item": "salsa de tomate",
+          "cantidad": 1
+        },
+        {
+          "item": "queso",
+          "cantidad": 2
+        },
+        {
+          "item": "sal",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 5,
+      "produce": {
+        "item": "pizza muzzarella",
+        "cantidad": 1
+      }
+    },
+    {
+      "nombre": "bizcochuelo",
+      "ingredientes": [
+        {
+          "item": "harina",
+          "cantidad": 2
+        },
+        {
+          "item": "huevo",
+          "cantidad": 3
+        },
+        {
+          "item": "azúcar",
+          "cantidad": 2
+        },
+        {
+          "item": "leche",
+          "cantidad": 1
+        },
+        {
+          "item": "aceite",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 3,
+      "produce": {
+        "item": "bizcochuelo",
+        "cantidad": 1
+      }
+    },
+    {
+      "nombre": "dulce de leche",
+      "ingredientes": [
+        {
+          "item": "azúcar",
+          "cantidad": 2
+        },
+        {
+          "item": "leche",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 5,
+      "produce": {
+        "item": "dulce de leche",
+        "cantidad": 1
+      }
+    },
+    {
+      "nombre": "merengue",
+      "ingredientes": [
+        {
+          "item": "azúcar",
+          "cantidad": 2
+        },
+        {
+          "item": "huevo",
+          "cantidad": 3
+        }
+      ],
+      "tiempo_crafteo_minutos": 3,
+      "produce": {
+        "item": "merengue",
+        "cantidad": 1
+      }
+    },
+    {
+      "nombre": "torta",
+      "ingredientes": [
+        {
+          "item": "bizcochuelo",
+          "cantidad": 1
+        },
+        {
+          "item": "dulce de leche",
+          "cantidad": 1
+        },
+        {
+          "item": "merengue",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 3,
+      "produce": {
+        "item": "torta",
+        "cantidad": 1
+      }
+    },
+    {
+      "nombre": "caramelo",
+      "ingredientes": [
+        {
+          "item": "azúcar",
+          "cantidad": 2
+        },
+        {
+          "item": "leche",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 5,
+      "produce": {
+        "item": "caramelo",
+        "cantidad": 1
+      }
+    },
+    {
+      "nombre": "flan",
+      "ingredientes": [
+        {
+          "item": "huevo",
+          "cantidad": 4
+        },
+        {
+          "item": "leche",
+          "cantidad": 2
+        },
+        {
+          "item": "azúcar",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 3,
+      "produce": {
+        "item": "flan",
+        "cantidad": 1
+      }
+    },
+    {
+      "nombre": "flan con caramelo",
+      "ingredientes": [
+        {
+          "item": "flan",
+          "cantidad": 1
+        },
+        {
+          "item": "caramelo",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 10,
+      "produce": {
+        "item": "flan con caramelo",
+        "cantidad": 1
+      }
+    },
+    {
+      "nombre": "huevo frito",
+      "ingredientes": [
+        {
+          "item": "huevo",
+          "cantidad": 1
+        },
+        {
+          "item": "aceite",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 2,
+      "produce": {
+        "item": "huevo frito",
+        "cantidad": 1
+      }
+    },
+    {
+      "nombre": "hamburguesa",
+      "ingredientes": [
+        {
+          "item": "carne",
+          "cantidad": 1
+        },
+        {
+          "item": "masa",
+          "cantidad": 2
+        },
+        {
+          "item": "tomate",
+          "cantidad": 1
+        },
+        {
+          "item": "huevo frito",
+          "cantidad": 1
+        },
+        {
+          "item": "sal",
+          "cantidad": 1
+        },
+        {
+          "item": "queso",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 3,
+      "produce": {
+        "item": "hamburguesa",
+        "cantidad": 1
+      }
+    },
+    {
+      "nombre": "matambre a la pizza",
+      "ingredientes": [
+        {
+          "item": "carne",
+          "cantidad": 1
+        },
+        {
+          "item": "salsa de tomate",
+          "cantidad": 2
+        },
+        {
+          "item": "queso",
+          "cantidad": 2
+        }
+      ],
+      "tiempo_crafteo_minutos": 15,
+      "produce": {
+        "item": "matambre a la pizza",
+        "cantidad": 1
+      }
+    },
+    {
+      "nombre": "papas fritas",
+      "ingredientes": [
+        {
+          "item": "papa",
+          "cantidad": 3
+        },
+        {
+          "item": "aceite",
+          "cantidad": 2
+        }
+      ],
+      "tiempo_crafteo_minutos": 4,
+      "produce": {
+        "item": "papas fritas",
+        "cantidad": 2
+      }
+    },
+    {
+      "nombre": "matambre a la pizza con fritas",
+      "ingredientes": [
+        {
+          "item": "matambre a la pizza",
+          "cantidad": 1
+        },
+        {
+          "item": "papas fritas",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 3,
+      "produce": {
+        "item": "matambre a la pizza con fritas",
+        "cantidad": 1
+      }
+    },
+    {
+      "nombre": "asado",
+      "ingredientes": [
+        {
+          "item": "carne",
+          "cantidad": 1
+        },
+        {
+          "item": "sal",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 15,
+      "produce": {
+        "item": "asado",
+        "cantidad": 1
+      }
+    },
+    {
+      "nombre": "relleno de empanada",
+      "ingredientes": [
+        {
+          "item": "carne",
+          "cantidad": 1
+        },
+        {
+          "item": "sal",
+          "cantidad": 1
+        },
+        {
+          "item": "huevo",
+          "cantidad": 2
+        },
+        {
+          "item": "aceite",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 5,
+      "produce": {
+        "item": "relleno de empanada",
+        "cantidad": 1
+      }
+    },
+    {
+      "nombre": "empanada de carne",
+      "ingredientes": [
+        {
+          "item": "relleno de empanada",
+          "cantidad": 1
+        },
+        {
+          "item": "masa",
+          "cantidad": 1
+        },
+        {
+          "item": "aceite",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 5,
+      "produce": {
+        "item": "empanada de carne",
+        "cantidad": 1
+      }
+    }
+  ]
+}

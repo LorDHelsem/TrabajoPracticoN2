@@ -1,22 +1,65 @@
-1 : 4 : 14
-Obtener receta basica
+21 : 25 : 31
+Arroz con Pollo y con Ensalada 
+	Ensalada con cebolla 2
+	Arroz con Pollo 5
 
-1 : 4 : 14
-Arroz con Pollo y con Ensalada 178.5 Minutos
-	Ensalada con cebolla 2 51.0 Minutos
-	Arroz con Pollo 5 127.5 Minutos
+21 : 59 : 7
+Arroz con Pollo y con Ensalada 
+	Ensalada con cebolla 2
+	Arroz con Pollo 5
 
-1 : 4 : 14
-Obtener receta Completa
+22 : 21 : 28
+Arroz con Pollo y con Ensalada 
+	Ensalada con cebolla 2
+	Arroz con Pollo 5
 
-1 : 4 : 14
-Arroz con Pollo y con Ensalada 178.5 Minutos
-	Ensalada con cebolla 2 51.0 Minutos
-		Cebolla 2
-		Ensalada de tomate y de lechuga 2 51.0 Minutos
-			Lechuga 6
-			Tomate 4
-	Arroz con Pollo 5 127.5 Minutos
-		Arroz 5
-		Pollo 10
+22 : 21 : 56
+Arroz con Pollo y con Ensalada 
+	Ensalada con cebolla 2
+	Arroz con Pollo 5
+
+22 : 23 : 35
+Arroz con Pollo y con Ensalada 
+	Ensalada con cebolla 2
+	Arroz con Pollo 5
+
+22 : 24 : 38
+Arroz con Pollo y con Ensalada 
+	Ensalada con cebolla 2
+	Arroz con Pollo 5
+
+22 : 25 : 17
+Arroz con Pollo y con Ensalada 
+	Ensalada con cebolla 2
+	Arroz con Pollo 5
+
+22 : 26 : 16
+Arroz con Pollo y con Ensalada 
+	Ensalada con cebolla 2
+	Arroz con Pollo 5
+
+22 : 26 : 40
+Arroz con Pollo y con Ensalada 
+	Ensalada con cebolla 2
+	Arroz con Pollo 5
+
+22 : 27 : 51
+Arroz con Pollo y con Ensalada 
+	Ensalada con cebolla 2
+	Arroz con Pollo 5
+
+22 : 28 : 13
+Arroz con Pollo y con Ensalada 
+	Ensalada con cebolla 2
+	Arroz con Pollo 5
+
+22 : 28 : 45
+Arroz con Pollo y con Ensalada 
+	Ensalada con cebolla 2
+	Arroz con Pollo 5
+
+22 : 29 : 49
+Arroz con Pollo y con Ensalada 
+	Ensalada con cebolla 2
+	Arroz con Pollo 5
 

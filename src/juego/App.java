@@ -33,13 +33,13 @@ public class App {
 		System.out.println("Obtener receta basica\n");
 		System.out.println(platoComunFinalIngrediente.getReceta());
 		System.out.println("Obtener receta Completa\n");
+		System.out.println(platoComunFinalIngrediente.getArbolCompleto());
+		System.out.println(platoComunFinalIngrediente.getTiempoDePreparacion());
 		System.out.println(platoComunFinalIngrediente.getRecetaCompleta());
 		
 		Registro reg = new Registro();
-		reg.agregarRegistroTemporal("Obtener receta basica\n");
+		
 		reg.agregarRegistroTemporal(platoComunFinalIngrediente.getReceta());
-		reg.agregarRegistroTemporal("Obtener receta Completa\n");
-		reg.agregarRegistroTemporal(platoComunFinalIngrediente.getRecetaCompleta());
 		reg.guardarRegistroTemporal();
 	}
 }
