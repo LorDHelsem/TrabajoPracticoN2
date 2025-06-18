@@ -122,5 +122,9 @@ public class Inventario {
 	    }
 	}
 
+	
+	public Map<Item, Integer> getObjetos() {
+		return objetos;
+	}	
 
 }

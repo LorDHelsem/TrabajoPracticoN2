@@ -63,3 +63,8 @@ Arroz con Pollo y con Ensalada
 	Ensalada con cebolla 2
 	Arroz con Pollo 5
 
+10 : 36 : 20
+Arroz con Pollo y con Ensalada 
+	Ensalada con cebolla 2
+	Arroz con Pollo 5
+

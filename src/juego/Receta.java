@@ -42,6 +42,7 @@ public class Receta {
 		return this.tiempoTotal;
 	}
 
+	
 	public String getIngredientes() {
 		StringBuilder retorno = new StringBuilder();
 		retorno.append(this.getNombre() + " " + "\n");
@@ -51,6 +52,10 @@ public class Receta {
 			retorno.append("\t" + ingrediente.getNombre() + " " + cantidad + "\n");
 		}
 		return retorno.toString();
+	}
+
+	public Map<Ingrediente, Integer> getIngredientes2() {
+		return ingredientes;
 	}
 
 	public String getArbolDeCrafteo() {
@@ -94,6 +99,40 @@ public class Receta {
 		}
 		return retorno.toString();
 	}
+	//------------------------------- ESTO HACE QUE SE MUESTRE DE UNA RECETA CUANTO NECESITA DE LOS INGREDIENTE BASICOS
+	public Map<String, Integer> getIngredientesBasicosTotales(int cantidadNecesaria) {
+	    Map<String, Integer> total = new HashMap<>();
+
+	    for (Map.Entry<Ingrediente, Integer> entry : this.ingredientes.entrySet()) {
+	        Ingrediente ingrediente = entry.getKey();
+	        int cantidad = entry.getValue() * cantidadNecesaria;
+
+	        if (ingrediente.esIngredienteBasico()) {
+	            total.merge(ingrediente.getNombre(), cantidad, Integer::sum);
+	        } else {
+	            Map<String, Integer> subtotales = ((IngredienteIntermedio) ingrediente).getIngredientesBasicosTotales(cantidad);
+	            for (Map.Entry<String, Integer> subEntry : subtotales.entrySet()) {
+	                total.merge(subEntry.getKey(), subEntry.getValue(), Integer::sum);
+	            }
+	        }
+	    }
+
+	    return total;
+	}
+	
+	public String getIngredientesBasicosComoString() {
+	    StringBuilder sb = new StringBuilder();
+	    sb.append(this.nombre).append("\n");
+
+	    Map<String, Integer> totales = this.getIngredientesBasicosTotales(1);
+	    for (Map.Entry<String, Integer> entry : totales.entrySet()) {
+	        sb.append(entry.getKey()).append(" ").append(entry.getValue()).append("\n");
+	    }
+
+	    return sb.toString();
+	}
+
+	//-------------------------------
 
 	public String getIngredienteCompleto(Integer cant) {
 		StringBuilder retorno = new StringBuilder();
@@ -111,4 +150,5 @@ public class Receta {
 		return retorno.toString();
 	}
 
+	
 }

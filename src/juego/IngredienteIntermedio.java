@@ -1,5 +1,7 @@
 package juego;
 
+import java.util.Map;
+
 public class IngredienteIntermedio extends Ingrediente {
 	private Receta receta;
 
@@ -40,4 +42,9 @@ public class IngredienteIntermedio extends Ingrediente {
 	public Boolean esIngredienteBasico() {
 		return false;
 	}
+	@Override
+	public Map<String, Integer> getIngredientesBasicosTotales(int cantidad) {
+	    return receta.getIngredientesBasicosTotales(cantidad);
+	}
+
 }

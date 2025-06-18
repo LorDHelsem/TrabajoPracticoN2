@@ -1,5 +1,7 @@
 package juego;
 
+import java.util.Map;
+
 public abstract class Ingrediente extends Item {
 
 	public Ingrediente(String nombre) {
@@ -11,5 +13,7 @@ public abstract class Ingrediente extends Item {
 	public String toString() {
 	    return getNombre();
 	}
+
+	public abstract Map<String, Integer> getIngredientesBasicosTotales(int cantidad);
 
 }

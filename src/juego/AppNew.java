@@ -1,17 +1,20 @@
 package juego;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Map;
 
 public class AppNew {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		RecetaParser parser = new RecetaParser();
         parser.cargarRecetasDesdeJSON("archivosJson/recetas.json");
 
         Ingrediente resultado = parser.getIngredienteFinal("empanada de carne");
 
-        // Para mostrar al usuario todos los nombres de ingredientes disponibles.
+//         Para mostrar al usuario todos los nombres de ingredientes disponibles.
         System.out.println("Lista completa de ingredientes:");
         for (Ingrediente ing : parser.getTodos()) {
         	System.out.println("- " + ing.getNombre());
@@ -22,6 +25,7 @@ public class AppNew {
         System.out.println("\n\nRecetas cargadas:");
         for (Receta r : parser.getRecetas()) {
         	System.out.println("- " + r.getNombre());
+        	System.out.println("-  " + r.getIngredientesBasicosComoString());
         }
         
         if (resultado instanceof IngredienteIntermedio intermedio) {
@@ -60,10 +64,10 @@ public class AppNew {
         
         // Mostrar inventario recién cargado
         inventarioJugador.mostrarInventarioDisponible();
+        inventarioJugador.mostrarInventario();
         
         
-        
-     // Crear algunos ingredientes de prueba
+        // Crear algunos ingredientes de prueba
         IngredienteBasico harina = new IngredienteBasico("Harina");
         IngredienteBasico huevo = new IngredienteBasico("Huevo");
         IngredienteBasico sal = new IngredienteBasico("Sal");
@@ -85,7 +89,8 @@ public class AppNew {
         // Guardar inventario actual (debe guardar solo huevo y leche)
         System.out.println("\n== Guardar inventario ==");
         inventario.guardarInventarioActual();
-        
+              	
+      	
 	}
 }
 
