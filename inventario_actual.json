@@ -1,6 +1,15 @@
 {
   "elementos": {
-    "Leche": 2,
-    "Huevo": 3
+    "empanada de carne": 1,
+    "azúcar": 18,
+    "harina": 15,
+    "leche": 16,
+    "carne": 16,
+    "tomate": 16,
+    "huevo": 13,
+    "levadura": 14,
+    "papa": 20,
+    "sal": 19,
+    "aceite": 16
   }
 }

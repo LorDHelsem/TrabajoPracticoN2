@@ -16,9 +16,9 @@ public class IngredienteBasico extends Ingrediente {
 
 	@Override
 	public Map<String, Integer> getIngredientesBasicosTotales(int cantidad) {
-	    Map<String, Integer> resultado = new HashMap<>();
-	    resultado.put(this.getNombre(), cantidad);
-	    return resultado;
+		Map<String, Integer> resultado = new HashMap<>();
+		resultado.put(this.getNombre(), cantidad);
+		return resultado;
 	}
 
 }

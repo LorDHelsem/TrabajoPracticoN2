@@ -12,7 +12,7 @@ public class Receta {
 
 	@SafeVarargs
 	public Receta(String nombre, double tiempo, Map.Entry<Ingrediente, Integer>... ingredientes) {
-		this.ingredientes = new HashMap<Ingrediente, Integer>();
+		this.ingredientes = new HashMap<>();
 		this.nombre = nombre;
 		this.tiempoDeCrafteo = tiempo;
 		double tiempoAuxiliar = tiempo;
@@ -42,7 +42,6 @@ public class Receta {
 		return this.tiempoTotal;
 	}
 
-	
 	public String getIngredientes() {
 		StringBuilder retorno = new StringBuilder();
 		retorno.append(this.getNombre() + " " + "\n");
@@ -93,46 +92,49 @@ public class Receta {
 			if (ingrediente.esIngredienteBasico()) {
 				retorno.append(ingrediente.getNombre() + " " + cantidad + "\n");
 			} else {
-				
+
 				retorno.append(((IngredienteIntermedio) ingrediente).getRecetaCompleta(cantidad));
 			}
 		}
 		return retorno.toString();
 	}
-	//------------------------------- ESTO HACE QUE SE MUESTRE DE UNA RECETA CUANTO NECESITA DE LOS INGREDIENTE BASICOS
+
+	// ------------------------------- ESTO HACE QUE SE MUESTRE DE UNA RECETA CUANTO
+	// NECESITA DE LOS INGREDIENTE BASICOS
 	public Map<String, Integer> getIngredientesBasicosTotales(int cantidadNecesaria) {
-	    Map<String, Integer> total = new HashMap<>();
+		Map<String, Integer> total = new HashMap<>();
 
-	    for (Map.Entry<Ingrediente, Integer> entry : this.ingredientes.entrySet()) {
-	        Ingrediente ingrediente = entry.getKey();
-	        int cantidad = entry.getValue() * cantidadNecesaria;
+		for (Map.Entry<Ingrediente, Integer> entry : this.ingredientes.entrySet()) {
+			Ingrediente ingrediente = entry.getKey();
+			int cantidad = entry.getValue() * cantidadNecesaria;
 
-	        if (ingrediente.esIngredienteBasico()) {
-	            total.merge(ingrediente.getNombre(), cantidad, Integer::sum);
-	        } else {
-	            Map<String, Integer> subtotales = ((IngredienteIntermedio) ingrediente).getIngredientesBasicosTotales(cantidad);
-	            for (Map.Entry<String, Integer> subEntry : subtotales.entrySet()) {
-	                total.merge(subEntry.getKey(), subEntry.getValue(), Integer::sum);
-	            }
-	        }
-	    }
+			if (ingrediente.esIngredienteBasico()) {
+				total.merge(ingrediente.getNombre(), cantidad, Integer::sum);
+			} else {
+				Map<String, Integer> subtotales = ((IngredienteIntermedio) ingrediente)
+						.getIngredientesBasicosTotales(cantidad);
+				for (Map.Entry<String, Integer> subEntry : subtotales.entrySet()) {
+					total.merge(subEntry.getKey(), subEntry.getValue(), Integer::sum);
+				}
+			}
+		}
 
-	    return total;
+		return total;
 	}
-	
+
 	public String getIngredientesBasicosComoString() {
-	    StringBuilder sb = new StringBuilder();
-	    sb.append(this.nombre).append("\n");
+		StringBuilder sb = new StringBuilder();
+		sb.append(this.nombre).append("\n");
 
-	    Map<String, Integer> totales = this.getIngredientesBasicosTotales(1);
-	    for (Map.Entry<String, Integer> entry : totales.entrySet()) {
-	        sb.append(entry.getKey()).append(" ").append(entry.getValue()).append("\n");
-	    }
+		Map<String, Integer> totales = this.getIngredientesBasicosTotales(1);
+		for (Map.Entry<String, Integer> entry : totales.entrySet()) {
+			sb.append(entry.getKey()).append(" ").append(entry.getValue()).append("\n");
+		}
 
-	    return sb.toString();
+		return sb.toString();
 	}
 
-	//-------------------------------
+	// -------------------------------
 
 	public String getIngredienteCompleto(Integer cant) {
 		StringBuilder retorno = new StringBuilder();
@@ -141,8 +143,8 @@ public class Receta {
 			Integer cantidad = entry.getValue();
 
 			if (ingrediente.esIngredienteBasico()) {
-				retorno.append("\t"+ingrediente.getNombre() + " " + cantidad * cant + "\n");
-				
+				retorno.append("\t" + ingrediente.getNombre() + " " + cantidad * cant + "\n");
+
 			} else {
 				retorno.append(((IngredienteIntermedio) ingrediente).getRecetaCompleta(cantidad * cant));
 			}
@@ -150,5 +152,16 @@ public class Receta {
 		return retorno.toString();
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+        sb.append("Receta: ").append(nombre).append("\n");
+        sb.append("Tiempo: ").append(tiempoDeCrafteo).append(" min\n");
+        sb.append("Ingredientes:\n");
+        ingredientes.forEach((ing, cant) -> 
+            sb.append("- ").append(ing.getNombre()).append(": ").append(cant).append("\n"));
+        return sb.toString();
+	}
 	
+
 }

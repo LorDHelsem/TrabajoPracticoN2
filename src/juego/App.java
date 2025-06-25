@@ -1,6 +1,6 @@
 package juego;
 
-import java.time.LocalDateTime;
+//import java.time.LocalDateTime;
 import java.util.Map;
 
 public class App {
@@ -30,18 +30,20 @@ public class App {
 		IngredienteIntermedio platoComunFinalIngrediente = new IngredienteIntermedio("Arroz con Pollo y con Ensalada",
 				platoComunFinalReceta);
 
-		System.out.println("- 1. Obtener receta (solo el primer nivel de la receta, sin descomponer los ingredientes):");
+		System.out
+				.println("- 1. Obtener receta (solo el primer nivel de la receta, sin descomponer los ingredientes):");
 		System.out.println(platoComunFinalIngrediente.getReceta());
-		
-		System.out.println("- 2. Obtener Receta completa (mostrar solo los elementos basicos necesarios, con sus cantidades totales):");
-		//System.out.println(platoComunFinalIngrediente.getTiempoDePreparacion());
+
+		System.out.println(
+				"- 2. Obtener Receta completa (mostrar solo los elementos basicos necesarios, con sus cantidades totales):");
+		// System.out.println(platoComunFinalIngrediente.getTiempoDePreparacion());
 		System.out.println(platoComunFinalIngrediente.getRecetaCompleta());
-		
+
 		System.out.println("- Bonus. Obtener Arbol de crafteo (Cantidad y tiempo de cada ingrediente):");
 		System.out.println(platoComunFinalIngrediente.getArbolCompleto());
-		
+
 		Registro reg = new Registro();
-		reg.agregarRegistroTemporal(platoComunFinalIngrediente.getReceta());
+		reg.agregarRegistroTemporal(platoComunFinalIngrediente.getRecetaString());
 		reg.guardarRegistroTemporal();
 	}
 }

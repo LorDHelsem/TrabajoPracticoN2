@@ -10,8 +10,11 @@ public class IngredienteIntermedio extends Ingrediente {
 		this.receta = receta;
 	}
 
-	public String getReceta() {
-		return this.receta.getIngredientes();
+	public Receta getReceta() {
+		return this.receta;
+	}
+	public String getRecetaString() {
+		return this.receta.toString();
 	}
 
 	public String getRecetaCompleta() {
@@ -42,9 +45,10 @@ public class IngredienteIntermedio extends Ingrediente {
 	public Boolean esIngredienteBasico() {
 		return false;
 	}
+
 	@Override
 	public Map<String, Integer> getIngredientesBasicosTotales(int cantidad) {
-	    return receta.getIngredientesBasicosTotales(cantidad);
+		return receta.getIngredientesBasicosTotales(cantidad);
 	}
 
 }

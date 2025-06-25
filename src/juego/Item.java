@@ -12,7 +12,7 @@ public abstract class Item {
 	public String getNombre() {
 		return nombre;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(nombre);
@@ -20,12 +20,12 @@ public abstract class Item {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if ((obj == null) || (getClass() != obj.getClass())) {
 			return false;
-		if (getClass() != obj.getClass())
-			return false;
+		}
 		Item other = (Item) obj;
 		return Objects.equals(nombre, other.nombre);
 	}

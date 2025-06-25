@@ -1,96 +1,87 @@
 package juego;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
 public class AppNew {
 
 	public static void main(String[] args) throws IOException {
-		
-		RecetaParser parser = new RecetaParser();
-        parser.cargarRecetasDesdeJSON("archivosJson/recetas.json");
 
-        Ingrediente resultado = parser.getIngredienteFinal("empanada de carne");
+		ParseoJson parser = new ParseoJson();
+		parser.cargarRecetasDesdeJSON("archivosJson/recetas.json");
 
-//         Para mostrar al usuario todos los nombres de ingredientes disponibles.
-        System.out.println("Lista completa de ingredientes:");
-        for (Ingrediente ing : parser.getTodos()) {
-        	System.out.println("- " + ing.getNombre());
-        }
-        
-        // Para saber qué recetas tiene el sistema.
-        // Para generar un menú dinámico o una interfaz de selección.
-        System.out.println("\n\nRecetas cargadas:");
-        for (Receta r : parser.getRecetas()) {
-        	System.out.println("- " + r.getNombre());
-        	System.out.println("-  " + r.getIngredientesBasicosComoString());
-        }
-        
-        if (resultado instanceof IngredienteIntermedio intermedio) {
-        	System.out.println("\nReceta encontrada para: " + resultado);
-        } else if (resultado != null) {
-        	System.out.println("\nEs un ingrediente básico: " + resultado.getNombre());
-        } else {
-        	System.out.println("\nNo se encontró el ingrediente: " + resultado);
-        }
-        
-        
-        if (resultado instanceof IngredienteIntermedio intermedio) {
-            System.out.println("- 1. Obtener receta:");
-            System.out.println(intermedio.getReceta());
+		Ingrediente resultado = parser.getIngredienteFinal("empanada de carne");
 
-            System.out.println("- 2. Receta completa:");
-            System.out.println(intermedio.getRecetaCompleta());
+        //Para mostrar al usuario todos los nombres de ingredientes disponibles.
+		System.out.println("Lista completa de ingredientes:");
+		for (Ingrediente ing : parser.getTodos()) {
+			System.out.println("- " + ing.getNombre());
+		}
 
-            System.out.println("- Bonus. Arbol de crafteo:");
-            System.out.println(intermedio.getArbolCompleto());
-            
-            
-        } else if (resultado != null) {
-            System.out.println("Es un ingrediente basico: " + resultado.getNombre());
-        } else {
-            System.out.println("No se encontro el ingrediente.");
-        }
-        
-        Inventario inventarioJugador = new Inventario();
-        parser.inicializarInventario(inventarioJugador);
+		// Para saber qué recetas tiene el sistema y generar un menú dinámico o una interfaz de selección.
+		System.out.println("\n\nRecetas cargadas:");
+		for (Receta r : parser.getRecetas()) {
+			// System.out.println("- " + r.getNombre());
+			System.out.println("-  " + r.getIngredientesBasicosComoString());
+		}
 
-        // Mostrar inventario recién creado
-        inventarioJugador.mostrarInventario();
-        
-        inventarioJugador.cargarDesdeArchivoJSON("archivosJson/inventario.json"); // Carga cantidades
-        
-        // Mostrar inventario recién cargado
-        inventarioJugador.mostrarInventarioDisponible();
-        inventarioJugador.mostrarInventario();
-        
-        
-        // Crear algunos ingredientes de prueba
-        IngredienteBasico harina = new IngredienteBasico("Harina");
-        IngredienteBasico huevo = new IngredienteBasico("Huevo");
-        IngredienteBasico sal = new IngredienteBasico("Sal");
-        IngredienteBasico leche = new IngredienteBasico("Leche");
+		if (resultado instanceof IngredienteIntermedio) {
+			System.out.println("\nReceta encontrada para: " + resultado);
+		} else if (resultado != null) {
+			System.out.println("\nEs un ingrediente básico: " + resultado.getNombre());
+		} else {
+			System.out.println("\nNo se encontró el ingrediente: " + resultado);
+		}
 
-        // Crear inventario e inicializar con cantidades
-        Inventario inventario = new Inventario();
+		if (resultado instanceof IngredienteIntermedio intermedio) {
+			System.out.println("- 1. Obtener receta:");
+			System.out.println(intermedio.getReceta());
 
-        // Simular carga desde RecetaParser (todos en cero)
-        inventario.agregarItem(Map.entry(harina, 0));
-        inventario.agregarItem(Map.entry(huevo, 3));
-        inventario.agregarItem(Map.entry(sal, 0));
-        inventario.agregarItem(Map.entry(leche, 2));
+			System.out.println("- 2. Receta completa:");
+			System.out.println(intermedio.getRecetaCompleta());
 
-        // Mostrar inventario (debe mostrar solo huevo y leche)
-        System.out.println("\n\n== Mostrar inventario ==");
-        inventario.mostrarInventarioDisponible();
+			System.out.println("- Bonus. Arbol de crafteo:");
+			System.out.println(intermedio.getArbolCompleto());
 
-        // Guardar inventario actual (debe guardar solo huevo y leche)
-        System.out.println("\n== Guardar inventario ==");
-        inventario.guardarInventarioActual();
-              	
-      	
+		} else if (resultado != null) {
+			System.out.println("Es un ingrediente basico: " + resultado.getNombre());
+		} else {
+			System.out.println("No se encontro el ingrediente.");
+		}
+
+		Inventario inventarioJugador = new Inventario();
+		parser.inicializarInventario(inventarioJugador);
+
+		// Mostrar inventario recién creado
+		inventarioJugador.mostrarInventario();
+
+		parser.cargarInventarioDesdeArchivoJSON(inventarioJugador,"archivosJson/inventario.json"); // Carga cantidades
+
+		// Mostrar inventario recién cargado
+		inventarioJugador.mostrarInventarioDisponible();
+
+		// Crear algunos ingredientes de prueba
+		IngredienteBasico harina = new IngredienteBasico("Harina");
+		IngredienteBasico huevo = new IngredienteBasico("Huevo");
+		IngredienteBasico sal = new IngredienteBasico("Sal");
+		IngredienteBasico leche = new IngredienteBasico("Leche");
+
+		// Crear inventario e inicializar con cantidades
+		Inventario inventario = new Inventario();
+
+		// Simular carga desde RecetaParser (todos en cero)
+		inventario.agregarItem(Map.entry(harina, 0));
+		inventario.agregarItem(Map.entry(huevo, 3));
+		inventario.agregarItem(Map.entry(sal, 0));
+		inventario.agregarItem(Map.entry(leche, 2));
+
+		// Mostrar inventario (debe mostrar solo huevo y leche)
+		System.out.println("\n\n== Mostrar inventario ==");
+		inventario.mostrarInventarioDisponible();
+
+		// Guardar inventario actual (debe guardar solo huevo y leche)
+		System.out.println("\n== Guardar inventario ==");
+		parser.guardarInventarioActual(inventarioJugador);
+
 	}
 }
-

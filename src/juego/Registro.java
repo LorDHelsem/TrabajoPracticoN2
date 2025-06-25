@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Registro {
-	private List<String> historial = new ArrayList<String>();
+	private List<String> historial = new ArrayList<>();
 	private static final String PATH = "historial_de_crafteo/";
 	private static final String NOMBRE = "HISTORIAL_DE_CRAFTEO.txt";
 	private FileWriter fileArch = null;
@@ -22,8 +22,7 @@ public class Registro {
 		historial.add(LocalDateTime.now().getHour() + " : " + LocalDateTime.now().getMinute() + " : "
 				+ LocalDateTime.now().getSecond() + "\n" + registro);
 	}
-	
-	
+
 	public void guardarRegistroTemporal() {
 		try {
 			fileArch = new FileWriter(PATH + NOMBRE, true);
