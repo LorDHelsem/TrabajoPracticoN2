@@ -32,12 +32,14 @@ public class AppJugador {
 		parser.inicializarInventario(inventarioJugador);
 		parser.cargarInventarioDesdeArchivoJSON(inventarioJugador, "archivosJson/inventario.json");
 		
-		Jugador jug1= new Jugador("tomas m", inventarioJugador, parser);
+
+		Registro registro= new Registro();
+		Jugador jug1= new Jugador("tomas m", inventarioJugador, parser,registro);
 		
 		
 		if(recetaEmpanada!= null) {
-			//boolean sePuedeRealizarCrafteo= jug1.craftear(recetaEmpanada);
-			boolean sePuedeRealizarCrafteo = jug1.craftear(recetaEmpanada, inventarioJugador.getCatalizador("catalizador_fuego"));
+			boolean sePuedeRealizarCrafteo= jug1.craftear(recetaEmpanada);
+			//boolean sePuedeRealizarCrafteo = jug1.craftear(recetaEmpanada, inventarioJugador.getCatalizador("catalizador_fuego"));
 			if(sePuedeRealizarCrafteo) {
 				System.out.println("¡Crafteo exitoso!");
              	inventarioJugador.mostrarInventarioDisponible();

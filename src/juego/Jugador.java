@@ -8,11 +8,13 @@ public class Jugador {
 	private String nombre;
 	private Inventario inventario;
 	private ParseoJson parser;
+	private Registro registro;
 
-	public Jugador(String nombre, Inventario inventario, ParseoJson parser) {
+	public Jugador(String nombre, Inventario inventario, ParseoJson parser, Registro registro) {
 		this.nombre = nombre;
 		this.inventario = inventario;
 		this.parser = parser;
+		this.registro = registro;
 	}
 
 	public boolean craftear(Receta receta) {
@@ -28,23 +30,33 @@ public class Jugador {
 		}
 
 		Ingrediente productoFinal = parser.getIngredienteFinal(receta.getNombre());
-		int cantidadProducida= receta.getCantidadProducida();
+		int cantidadProducida = receta.getCantidadProducida();
 		inventario.agregarItem(new AbstractMap.SimpleEntry<>(productoFinal, cantidadProducida));
+		
+		StringBuilder log = new StringBuilder();
+		log.append("Jugador: ").append(nombre).append("\n");
+		log.append("Receta: ").append(receta.getNombre()).append("\n");
+		log.append("Cantidad producida: ").append(receta.getCantidadProducida()).append("\n");
+		log.append("Tiempo de crafteo: ").append(receta.getTiempoTotal()).append(" min\n");
+		
+		registro.agregarRegistroTemporal(log.toString());
+		registro.guardarRegistroTemporal();
 
 		System.out.println("¡Crafteo exitoso" + this.nombre + "! Se produjo: " + receta.getNombre());
 		return true;
 	}
 
 	public boolean craftear(Receta receta, Catalizador catalizador) {
-		if (catalizador.getNombre() != "ninguno") {
+		if (catalizador.getNombre() != "ninguno" || catalizador != null) {
 			if ((receta.getTipoCatalizador().equals("fuego") && catalizador instanceof CatalizadorFuego)
-					|| (receta.getTipoCatalizador().equals("masa_madre") && catalizador instanceof CatalizadorMasaMadre)) {
+					|| (receta.getTipoCatalizador().equals("masa_madre")
+							&& catalizador instanceof CatalizadorMasaMadre)) {
 				catalizador.aplicarEfecto(receta);
-				 Integer cantidadActual = inventario.getObjetos().get(catalizador);
-		            if (cantidadActual != null && cantidadActual > 0) {
-		                inventario.getObjetos().put(catalizador, cantidadActual - 1);
-		                System.out.println("→ Se consumió 1 unidad de " + catalizador.getNombre());
-		            }
+				Integer cantidadActual = inventario.getObjetos().get(catalizador);
+				if (cantidadActual != null && cantidadActual > 0) {
+					inventario.getObjetos().put(catalizador, cantidadActual - 1);
+					System.out.println("→ Se consumió 1 unidad de " + catalizador.getNombre());
+				}
 			} else {
 				System.out.println("Catalizador incompatible con esta receta.");
 				return false;
@@ -84,4 +96,5 @@ public class Jugador {
 		}
 		return true;
 	}
+
 }

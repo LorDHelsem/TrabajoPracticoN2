@@ -8,8 +8,8 @@ public class CatalizadorFuego extends Catalizador {
 	
 	@Override
 	public void aplicarEfecto(Receta receta) {
-		double nuevoTiempo= receta.getTiempo()/2;
-		receta.setTiempoDeCrafteo(nuevoTiempo);
+		double nuevoTiempo= receta.getTiempoTotal()/2;
+		receta.setTiempoTotal(nuevoTiempo);
 		System.out.println("Catalizador FUEGO aplicado: tiempo de crafteo reducido a " + nuevoTiempo + " minutos.");
 	}
 }

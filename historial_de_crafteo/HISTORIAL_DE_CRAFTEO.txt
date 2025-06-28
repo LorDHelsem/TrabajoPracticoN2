@@ -136,3 +136,15 @@ Ingredientes:
 - Ensalada con cebolla: 2
 - Arroz con Pollo: 5
 
+17 : 56 : 0
+Jugador: tomas
+Receta: masa
+Cantidad producida: 2
+Tiempo de crafteo: 5.0 min
+
+18 : 1 : 33
+Jugador: tito
+Receta: empanada de carne
+Cantidad producida: 1
+Tiempo de crafteo: 7.5 min
+
