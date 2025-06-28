@@ -26,17 +26,33 @@ public class AppJugador {
 			System.out.println("No se encontró la receta 'empanada de carne'.");
 		}
 		
+		
+		
 		Inventario inventarioJugador= new Inventario();
 		parser.inicializarInventario(inventarioJugador);
 		parser.cargarInventarioDesdeArchivoJSON(inventarioJugador, "archivosJson/inventario.json");
 		
 		Jugador jug1= new Jugador("tomas m", inventarioJugador, parser);
 		
+		
 		if(recetaEmpanada!= null) {
-			boolean sePuedoRealizarCrafteo= jug1.craftear(recetaEmpanada);
-			if(sePuedoRealizarCrafteo) {
+			//boolean sePuedeRealizarCrafteo= jug1.craftear(recetaEmpanada);
+			boolean sePuedeRealizarCrafteo = jug1.craftear(recetaEmpanada, inventarioJugador.getCatalizador("catalizador_fuego"));
+			if(sePuedeRealizarCrafteo) {
 				System.out.println("¡Crafteo exitoso!");
              	inventarioJugador.mostrarInventarioDisponible();
+			}else {
+				System.out.println("No se pudo craftear.");
+			}
+		}
+		
+		Receta recetaMasa= parser.getRecetaPorNombre("masa");
+		
+		if(recetaMasa!= null) {
+			boolean sePuedeRealizarCrafteo2 = jug1.craftear(recetaMasa, inventarioJugador.getCatalizador("catalizador_masa_madre"));
+			if(sePuedeRealizarCrafteo2) {
+				System.out.println("¡Crafteo exitoso!");
+				inventarioJugador.mostrarInventarioDisponible();
 			}else {
 				System.out.println("No se pudo craftear.");
 			}

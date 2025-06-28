@@ -72,5 +72,14 @@ public class Inventario {
         objetos.put(ingrediente, objetos.get(ingrediente) - cantidad);
     }
 	
+	public Catalizador getCatalizador(String nombre) {
+	    for (Item item : objetos.keySet()) {
+	        if (item instanceof Catalizador && item.getNombre().equalsIgnoreCase(nombre)) {
+	            return (Catalizador) item;
+	        }
+	    }
+	    return null;
+	}
+
 
 }

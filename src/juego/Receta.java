@@ -9,11 +9,15 @@ public class Receta {
 	private Map<Ingrediente, Integer> ingredientes;
 	private double tiempoTotal;
 	private double tiempoDeCrafteo;
+	private String tipoCatalizador;
+	private int cantidadProducida=1;
 
 	@SafeVarargs
-	public Receta(String nombre, double tiempo, Map.Entry<Ingrediente, Integer>... ingredientes) {
+	public Receta(String nombre, String tipoCatalizador,int cantidadProducida, double tiempo, Map.Entry<Ingrediente, Integer>... ingredientes) {
 		this.ingredientes = new HashMap<>();
 		this.nombre = nombre;
+		this.tipoCatalizador=tipoCatalizador;
+		this.cantidadProducida=cantidadProducida;
 		this.tiempoDeCrafteo = tiempo;
 		double tiempoAuxiliar = tiempo;
 		for (Map.Entry<Ingrediente, Integer> entry : ingredientes) {
@@ -36,6 +40,14 @@ public class Receta {
 
 	public double getTiempo() {
 		return this.tiempoDeCrafteo;
+	}
+	
+	public String getTipoCatalizador() {
+		return this.tipoCatalizador;
+	}
+	
+	public int getCantidadProducida() {
+		return this.cantidadProducida;
 	}
 
 	public double getTiempoTotal() {
@@ -150,6 +162,17 @@ public class Receta {
 			}
 		}
 		return retorno.toString();
+	}
+	
+	public void setCantidadProducida(int cantidadProducida) {
+		this.cantidadProducida=cantidadProducida;
+	}
+	public void setTiempoTotal(double tiempoTotal) {
+		this.tiempoTotal = tiempoTotal;
+	}
+
+	public void setTiempoDeCrafteo(double tiempoDeCrafteo) {
+		this.tiempoDeCrafteo = tiempoDeCrafteo;
 	}
 
 	@Override

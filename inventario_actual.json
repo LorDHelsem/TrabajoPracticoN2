@@ -2,14 +2,17 @@
   "elementos": {
     "empanada de carne": 1,
     "azúcar": 18,
-    "harina": 15,
+    "catalizador_fuego": 3,
+    "harina": 12,
     "leche": 16,
     "carne": 16,
+    "catalizador_masa_madre": 2,
     "tomate": 16,
     "huevo": 13,
-    "levadura": 14,
+    "masa": 6,
+    "levadura": 13,
     "papa": 20,
     "sal": 19,
-    "aceite": 16
+    "aceite": 15
   }
 }

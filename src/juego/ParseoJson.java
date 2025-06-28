@@ -20,7 +20,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 public class ParseoJson {
-	
+
 	private Map<String, Ingrediente> ingredientesMap = new HashMap<>();
 	private Map<String, JsonObject> recetasPendientes = new HashMap<>();
 	private List<Receta> listaRecetas = new ArrayList<>();
@@ -56,6 +56,7 @@ public class ParseoJson {
 	}
 
 	// Construye un ingrediente (básico o intermedio), recursivamente
+	// Construye un ingrediente (básico o intermedio), recursivamente
 	private Ingrediente getIngrediente(String nombre) {
 		if (ingredientesMap.containsKey(nombre)) {
 			return ingredientesMap.get(nombre);
@@ -84,10 +85,17 @@ public class ParseoJson {
 			listaIngredientes.add(new AbstractMap.SimpleEntry<>(ingrediente, cantidad));
 		}
 
+		//Veo si a la receta, se le puede aplicar un catalizador
+		String tipoCatalizador = recetaJson.get("tipo_catalizador").getAsString().toLowerCase();
+		
+		//Veo que produce y en que cantidad la receta
+		JsonObject produce = recetaJson.getAsJsonObject("produce");
+		int cantidadProducida = produce.get("cantidad").getAsInt();
+
 		// Construcción de Receta
 		@SuppressWarnings("unchecked")
 		Map.Entry<Ingrediente, Integer>[] arregloIngredientes = listaIngredientes.toArray(new Map.Entry[0]);
-		Receta receta = new Receta(nombre, tiempo, arregloIngredientes);
+		Receta receta = new Receta(nombre, tipoCatalizador,cantidadProducida, tiempo, arregloIngredientes);
 		listaRecetas.add(receta);
 
 		// Construcción de IngredienteIntermedio
@@ -105,15 +113,15 @@ public class ParseoJson {
 	public Collection<Ingrediente> getTodos() {
 		return ingredientesMap.values();
 	}
-	
-	//Devuelve solamente una receta por su nombre
+
+	// Devuelve solamente una receta por su nombre
 	public Receta getRecetaPorNombre(String nombre) {
-	    for (Receta receta : listaRecetas) {
-	        if (receta.getNombre().equalsIgnoreCase(nombre)) {
-	            return receta;
-	        }
-	    }
-	    return null;
+		for (Receta receta : listaRecetas) {
+			if (receta.getNombre().equalsIgnoreCase(nombre)) {
+				return receta;
+			}
+		}
+		return null;
 	}
 
 	// Devuelve la lista de recetas completas
@@ -122,7 +130,7 @@ public class ParseoJson {
 	}
 
 	// TODO LO DEL INVENTARIO
-	public void cargarInventarioDesdeArchivoJSON(Inventario inventario,String archivo) {
+	public void cargarInventarioDesdeArchivoJSON(Inventario inventario, String archivo) {
 		if (inventario.getObjetos().isEmpty()) {
 			System.err.println(
 					"El inventario no fue inicializado. Primero llamá a 'inicializarInventario()' desde RecetaParser.");
@@ -148,7 +156,14 @@ public class ParseoJson {
 				}
 
 				if (!encontrado) {
+					if (nombre.toLowerCase().contains("catalizador")) {
+				        Item item = nombre.contains("fuego") 
+				            ? new CatalizadorFuego(nombre)
+				            : new CatalizadorMasaMadre(nombre);
+				        inventario.agregarItem(new AbstractMap.SimpleEntry<>(item, cantidad));
+					}else {
 					System.err.println("Advertencia: '" + nombre + "' no existe en el inventario inicial. Se ignoró.");
+					}
 				}
 			}
 
@@ -183,12 +198,13 @@ public class ParseoJson {
 		}
 	}
 
-	
 	public void inicializarInventario(Inventario inventario) {
 		for (Ingrediente ingrediente : ingredientesMap.values()) {
 			inventario.agregarItem(new AbstractMap.SimpleEntry<>(ingrediente, 0));
 		}
-	} // con el inventario_del_jugador se setean las cantidades disponibles para ese
-		// jugador
+		
+		inventario.agregarItem(new AbstractMap.SimpleEntry<>(new CatalizadorFuego("catalizador_fuego"), 0));
+		inventario.agregarItem(new AbstractMap.SimpleEntry<>(new CatalizadorMasaMadre("catalizador_masa_madre"), 0));
+	} 
 
 }

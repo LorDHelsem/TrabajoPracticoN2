@@ -73,3 +73,66 @@ Arroz con Pollo y con Ensalada
 	Ensalada con cebolla 2
 	Arroz con Pollo 5
 
+22 : 27 : 1
+Receta: Arroz con Pollo y con Ensalada
+Tiempo: 25.5 min
+Ingredientes:
+- Ensalada con cebolla: 2
+- Arroz con Pollo: 5
+
+22 : 47 : 32
+Receta: Arroz con Pollo y con Ensalada
+Tiempo: 25.5 min
+Ingredientes:
+- Ensalada con cebolla: 2
+- Arroz con Pollo: 5
+
+22 : 48 : 0
+Receta: Arroz con Pollo y con Ensalada
+Tiempo: 25.5 min
+Ingredientes:
+- Ensalada con cebolla: 2
+- Arroz con Pollo: 5
+
+22 : 49 : 6
+Receta: Arroz con Pollo y con Ensalada
+Tiempo: 25.5 min
+Ingredientes:
+- Ensalada con cebolla: 2
+- Arroz con Pollo: 5
+
+22 : 53 : 7
+Receta: Arroz con Pollo y con Ensalada
+Tiempo: 25.5 min
+Ingredientes:
+- Ensalada con cebolla: 2
+- Arroz con Pollo: 5
+
+22 : 54 : 54
+Receta: Arroz con Pollo y con Ensalada
+Tiempo: 25.5 min
+Ingredientes:
+- Ensalada con cebolla: 2
+- Arroz con Pollo: 5
+
+22 : 57 : 44
+Receta: Arroz con Pollo y con Ensalada
+Tiempo: 25.5 min
+Ingredientes:
+- Ensalada con cebolla: 2
+- Arroz con Pollo: 5
+
+22 : 58 : 29
+Receta: Arroz con Pollo y con Ensalada
+Tiempo: 25.5 min
+Ingredientes:
+- Ensalada con cebolla: 2
+- Arroz con Pollo: 5
+
+23 : 6 : 24
+Receta: Arroz con Pollo y con Ensalada
+Tiempo: 25.5 min
+Ingredientes:
+- Ensalada con cebolla: 2
+- Arroz con Pollo: 5
+

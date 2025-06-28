@@ -16,7 +16,8 @@
       "produce": {
         "item": "queso",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "ninguno"
     },
     {
       "nombre": "masa",
@@ -38,7 +39,8 @@
       "produce": {
         "item": "masa",
         "cantidad": 2
-      }
+      },
+      "tipo_catalizador": "masa_madre"
     },
     {
       "nombre": "salsa de tomate",
@@ -56,7 +58,8 @@
       "produce": {
         "item": "salsa de tomate",
         "cantidad": 2
-      }
+      },
+      "tipo_catalizador": "ninguno"
     },
     {
       "nombre": "pizza muzzarella",
@@ -82,7 +85,8 @@
       "produce": {
         "item": "pizza muzzarella",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "fuego"
     },
     {
       "nombre": "bizcochuelo",
@@ -112,7 +116,8 @@
       "produce": {
         "item": "bizcochuelo",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "ninguno"
     },
     {
       "nombre": "dulce de leche",
@@ -130,7 +135,8 @@
       "produce": {
         "item": "dulce de leche",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "ninguno"
     },
     {
       "nombre": "merengue",
@@ -148,7 +154,8 @@
       "produce": {
         "item": "merengue",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "ninguno"
     },
     {
       "nombre": "torta",
@@ -170,7 +177,8 @@
       "produce": {
         "item": "torta",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "ninguno"
     },
     {
       "nombre": "caramelo",
@@ -188,7 +196,8 @@
       "produce": {
         "item": "caramelo",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "ninguno"
     },
     {
       "nombre": "flan",
@@ -210,7 +219,8 @@
       "produce": {
         "item": "flan",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "ninguno"
     },
     {
       "nombre": "flan con caramelo",
@@ -228,7 +238,8 @@
       "produce": {
         "item": "flan con caramelo",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "ninguno"
     },
     {
       "nombre": "huevo frito",
@@ -246,7 +257,8 @@
       "produce": {
         "item": "huevo frito",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "fuego"
     },
     {
       "nombre": "hamburguesa",
@@ -280,7 +292,8 @@
       "produce": {
         "item": "hamburguesa",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "fuego"
     },
     {
       "nombre": "matambre a la pizza",
@@ -302,7 +315,8 @@
       "produce": {
         "item": "matambre a la pizza",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "fuego"
     },
     {
       "nombre": "papas fritas",
@@ -320,7 +334,8 @@
       "produce": {
         "item": "papas fritas",
         "cantidad": 2
-      }
+      },
+      "tipo_catalizador": "fuego"
     },
     {
       "nombre": "matambre a la pizza con fritas",
@@ -338,7 +353,8 @@
       "produce": {
         "item": "matambre a la pizza con fritas",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "fuego"
     },
     {
       "nombre": "asado",
@@ -356,7 +372,8 @@
       "produce": {
         "item": "asado",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "fuego"
     },
     {
       "nombre": "relleno de empanada",
@@ -382,7 +399,8 @@
       "produce": {
         "item": "relleno de empanada",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "fuego"
     },
     {
       "nombre": "empanada de carne",
@@ -404,7 +422,8 @@
       "produce": {
         "item": "empanada de carne",
         "cantidad": 1
-      }
+      },
+      "tipo_catalizador": "fuego"
     }
   ]
 }

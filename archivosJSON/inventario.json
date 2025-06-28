@@ -9,6 +9,8 @@
     "sal": 20,
     "levadura": 15,
     "azúcar": 18,
-    "leche": 16
+    "leche": 16,
+    "catalizador_fuego": 4,
+    "catalizador_masa_madre": 3
   }
 }

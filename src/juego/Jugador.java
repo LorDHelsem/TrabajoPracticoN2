@@ -12,7 +12,7 @@ public class Jugador {
 	public Jugador(String nombre, Inventario inventario, ParseoJson parser) {
 		this.nombre = nombre;
 		this.inventario = inventario;
-		this.parser=parser;
+		this.parser = parser;
 	}
 
 	public boolean craftear(Receta receta) {
@@ -28,10 +28,29 @@ public class Jugador {
 		}
 
 		Ingrediente productoFinal = parser.getIngredienteFinal(receta.getNombre());
-		inventario.agregarItem(new AbstractMap.SimpleEntry<>(productoFinal, 1));
+		int cantidadProducida= receta.getCantidadProducida();
+		inventario.agregarItem(new AbstractMap.SimpleEntry<>(productoFinal, cantidadProducida));
 
-		System.out.println("¡Crafteo exitoso"+this.nombre+"! Se produjo: " + receta.getNombre());
+		System.out.println("¡Crafteo exitoso" + this.nombre + "! Se produjo: " + receta.getNombre());
 		return true;
+	}
+
+	public boolean craftear(Receta receta, Catalizador catalizador) {
+		if (catalizador.getNombre() != "ninguno") {
+			if ((receta.getTipoCatalizador().equals("fuego") && catalizador instanceof CatalizadorFuego)
+					|| (receta.getTipoCatalizador().equals("masa_madre") && catalizador instanceof CatalizadorMasaMadre)) {
+				catalizador.aplicarEfecto(receta);
+				 Integer cantidadActual = inventario.getObjetos().get(catalizador);
+		            if (cantidadActual != null && cantidadActual > 0) {
+		                inventario.getObjetos().put(catalizador, cantidadActual - 1);
+		                System.out.println("→ Se consumió 1 unidad de " + catalizador.getNombre());
+		            }
+			} else {
+				System.out.println("Catalizador incompatible con esta receta.");
+				return false;
+			}
+		}
+		return craftear(receta);
 	}
 
 	private boolean puedeCraftear(Receta receta) {
