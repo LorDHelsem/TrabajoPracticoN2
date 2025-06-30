@@ -1,150 +1,60 @@
-21 : 25 : 31
-Arroz con Pollo y con Ensalada 
-	Ensalada con cebolla 2
-	Arroz con Pollo 5
-
-21 : 59 : 7
-Arroz con Pollo y con Ensalada 
-	Ensalada con cebolla 2
-	Arroz con Pollo 5
-
-22 : 21 : 28
-Arroz con Pollo y con Ensalada 
-	Ensalada con cebolla 2
-	Arroz con Pollo 5
-
-22 : 21 : 56
-Arroz con Pollo y con Ensalada 
-	Ensalada con cebolla 2
-	Arroz con Pollo 5
-
-22 : 23 : 35
-Arroz con Pollo y con Ensalada 
-	Ensalada con cebolla 2
-	Arroz con Pollo 5
-
-22 : 24 : 38
-Arroz con Pollo y con Ensalada 
-	Ensalada con cebolla 2
-	Arroz con Pollo 5
-
-22 : 25 : 17
-Arroz con Pollo y con Ensalada 
-	Ensalada con cebolla 2
-	Arroz con Pollo 5
-
-22 : 26 : 16
-Arroz con Pollo y con Ensalada 
-	Ensalada con cebolla 2
-	Arroz con Pollo 5
-
-22 : 26 : 40
-Arroz con Pollo y con Ensalada 
-	Ensalada con cebolla 2
-	Arroz con Pollo 5
-
-22 : 27 : 51
-Arroz con Pollo y con Ensalada 
-	Ensalada con cebolla 2
-	Arroz con Pollo 5
-
-22 : 28 : 13
-Arroz con Pollo y con Ensalada 
-	Ensalada con cebolla 2
-	Arroz con Pollo 5
-
-22 : 28 : 45
-Arroz con Pollo y con Ensalada 
-	Ensalada con cebolla 2
-	Arroz con Pollo 5
-
-22 : 29 : 49
-Arroz con Pollo y con Ensalada 
-	Ensalada con cebolla 2
-	Arroz con Pollo 5
-
-10 : 36 : 20
-Arroz con Pollo y con Ensalada 
-	Ensalada con cebolla 2
-	Arroz con Pollo 5
-
-19 : 35 : 17
-Arroz con Pollo y con Ensalada 
-	Ensalada con cebolla 2
-	Arroz con Pollo 5
-
-22 : 27 : 1
-Receta: Arroz con Pollo y con Ensalada
-Tiempo: 25.5 min
-Ingredientes:
-- Ensalada con cebolla: 2
-- Arroz con Pollo: 5
-
-22 : 47 : 32
-Receta: Arroz con Pollo y con Ensalada
-Tiempo: 25.5 min
-Ingredientes:
-- Ensalada con cebolla: 2
-- Arroz con Pollo: 5
-
-22 : 48 : 0
-Receta: Arroz con Pollo y con Ensalada
-Tiempo: 25.5 min
-Ingredientes:
-- Ensalada con cebolla: 2
-- Arroz con Pollo: 5
-
-22 : 49 : 6
-Receta: Arroz con Pollo y con Ensalada
-Tiempo: 25.5 min
-Ingredientes:
-- Ensalada con cebolla: 2
-- Arroz con Pollo: 5
-
-22 : 53 : 7
-Receta: Arroz con Pollo y con Ensalada
-Tiempo: 25.5 min
-Ingredientes:
-- Ensalada con cebolla: 2
-- Arroz con Pollo: 5
-
-22 : 54 : 54
-Receta: Arroz con Pollo y con Ensalada
-Tiempo: 25.5 min
-Ingredientes:
-- Ensalada con cebolla: 2
-- Arroz con Pollo: 5
-
-22 : 57 : 44
-Receta: Arroz con Pollo y con Ensalada
-Tiempo: 25.5 min
-Ingredientes:
-- Ensalada con cebolla: 2
-- Arroz con Pollo: 5
-
-22 : 58 : 29
-Receta: Arroz con Pollo y con Ensalada
-Tiempo: 25.5 min
-Ingredientes:
-- Ensalada con cebolla: 2
-- Arroz con Pollo: 5
-
-23 : 6 : 24
-Receta: Arroz con Pollo y con Ensalada
-Tiempo: 25.5 min
-Ingredientes:
-- Ensalada con cebolla: 2
-- Arroz con Pollo: 5
-
-17 : 56 : 0
-Jugador: tomas
-Receta: masa
+2025-06-30 12:51:56
+Jugador: asd
+Receta: salsa de tomate
 Cantidad producida: 2
+Tiempo de crafteo: 8.0 min
+
+2025-06-30 12:59:56
+Jugador: asd
+Receta: papas fritas
+Cantidad producida: 2
+Tiempo de crafteo: 4.0 min
+
+2025-06-30 13:03:56
+Jugador: asd
+Receta: papas fritas
+Cantidad producida: 2
+Tiempo de crafteo: 2.0 min
+
+2025-06-30 13:05:56
+Jugador: asd
+Receta: papas fritas
+Cantidad producida: 2
+Tiempo de crafteo: 2.0 min
+
+2025-06-30 15:43:48
+Jugador: Jordi
+Receta: masa
+Cantidad producida: 6
 Tiempo de crafteo: 5.0 min
 
-18 : 1 : 33
-Jugador: tito
-Receta: empanada de carne
-Cantidad producida: 1
-Tiempo de crafteo: 7.5 min
+2025-06-30 15:48:02
+Jugador: 4+
+Receta: salsa de tomate
+Cantidad producida: 2
+Tiempo de crafteo: 8.0 min
+
+2025-06-30 15:56:02
+Jugador: 4+
+Receta: salsa de tomate
+Cantidad producida: 2
+Tiempo de crafteo: 8.0 min
+
+2025-06-30 16:04:02
+Jugador: 4+
+Receta: salsa de tomate
+Cantidad producida: 2
+Tiempo de crafteo: 8.0 min
+
+2025-06-30 16:12:02
+Jugador: 4+
+Receta: salsa de tomate
+Cantidad producida: 2
+Tiempo de crafteo: 8.0 min
+
+2025-06-30 16:20:02
+Jugador: 4+
+Receta: salsa de tomate
+Cantidad producida: 2
+Tiempo de crafteo: 8.0 min
 

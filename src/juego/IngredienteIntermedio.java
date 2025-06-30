@@ -13,6 +13,7 @@ public class IngredienteIntermedio extends Ingrediente {
 	public Receta getReceta() {
 		return this.receta;
 	}
+
 	public String getRecetaString() {
 		return this.receta.toString();
 	}
@@ -21,9 +22,9 @@ public class IngredienteIntermedio extends Ingrediente {
 		return this.receta.getIngredienteCompleto();
 	}
 
-	public String getRecetaCompleta(Integer cant) {
-		return this.receta.getIngredienteCompleto(cant);
-	}
+//	public String getRecetaCompleta(Integer cant) {
+//		return this.receta.getIngredienteCompleto(cant);
+//	}
 
 	public String getArbolCompleto() {
 		return this.receta.getArbolDeCrafteo();

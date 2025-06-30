@@ -17,10 +17,10 @@ public class PrologConector {
 		BufferedWriter writer = new BufferedWriter(new FileWriter(ruta));
 
 		// Escribir hechos del inventario
-		for (Map.Entry<Item, java.lang.Integer> entrada : inventario.getObjetos().entrySet()) {
+		for (Map.Entry<Item, Integer> entrada : inventario.getObjetos().entrySet()) {
 			Item nombre = entrada.getKey();
 			int cantidad = entrada.getValue();
-			writer.write("tengo('" + nombre + "', " + cantidad + ").\n");
+			writer.write("tengo('" + nombre.getNombre() + "', " + cantidad + ").\n");
 		}
 
 		writer.write("\n");

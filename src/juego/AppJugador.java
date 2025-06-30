@@ -21,7 +21,7 @@ public class AppJugador {
 
 			// Opcional: Mostrar solo los ingredientes básicos necesarios
 			System.out.println("\n=== Ingredientes básicos necesarios ===");
-			System.out.println(recetaEmpanada.getIngredientesBasicosComoString());
+			System.out.println(recetaEmpanada.getIngredienteCompleto());
 		} else {
 			System.out.println("No se encontró la receta 'empanada de carne'.");
 		}
@@ -51,7 +51,7 @@ public class AppJugador {
 		Receta recetaMasa= parser.getRecetaPorNombre("masa");
 		
 		if(recetaMasa!= null) {
-			boolean sePuedeRealizarCrafteo2 = jug1.craftear(recetaMasa, inventarioJugador.getCatalizador("catalizador_masa_madre"));
+			boolean sePuedeRealizarCrafteo2 = jug1.craftearSimple(recetaMasa, inventarioJugador.getCatalizador("catalizador_masa_madre"));
 			if(sePuedeRealizarCrafteo2) {
 				System.out.println("¡Crafteo exitoso!");
 				inventarioJugador.mostrarInventarioDisponible();

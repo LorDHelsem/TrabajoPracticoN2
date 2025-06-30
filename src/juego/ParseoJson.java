@@ -189,7 +189,7 @@ public class ParseoJson {
 
 		root.add("elementos", elementos);
 
-		try (Writer writer = new FileWriter("inventario_actual.json")) {
+		try (Writer writer = new FileWriter("archivosJSON/inventario_actual.json")) {
 			Gson gson = new GsonBuilder().setPrettyPrinting().create();
 			gson.toJson(root, writer);
 			System.out.println("Inventario guardado correctamente en 'inventario_actual.json'.");
@@ -203,8 +203,8 @@ public class ParseoJson {
 			inventario.agregarItem(new AbstractMap.SimpleEntry<>(ingrediente, 0));
 		}
 		
-		inventario.agregarItem(new AbstractMap.SimpleEntry<>(new CatalizadorFuego("catalizador_fuego"), 0));
-		inventario.agregarItem(new AbstractMap.SimpleEntry<>(new CatalizadorMasaMadre("catalizador_masa_madre"), 0));
+		inventario.agregarItem(new AbstractMap.SimpleEntry<>(new CatalizadorFuego("fuego"), 0));
+		inventario.agregarItem(new AbstractMap.SimpleEntry<>(new CatalizadorMasaMadre("masa madre"), 0));
 	} 
 
 }

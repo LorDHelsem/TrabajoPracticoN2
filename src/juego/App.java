@@ -43,8 +43,5 @@ public class App {
 		System.out.println("- Bonus. Obtener Arbol de crafteo (Cantidad y tiempo de cada ingrediente):");
 		System.out.println(platoComunFinalIngrediente.getArbolCompleto());
 
-		Registro reg = new Registro();
-		reg.agregarRegistroTemporal(platoComunFinalIngrediente.getRecetaString());
-		reg.guardarRegistroTemporal();
 	}
 }

@@ -10,7 +10,7 @@
     "levadura": 15,
     "azúcar": 18,
     "leche": 16,
-    "catalizador_fuego": 4,
-    "catalizador_masa_madre": 3
+    "fuego": 4,
+    "masa madre": 3
   }
 }

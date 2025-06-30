@@ -1,5 +1,5 @@
 tengo('empanada de carne', 0).
-tengo('azúcar', 0).
+tengo('azúcar', 18).
 tengo('pizza muzzarella', 0).
 tengo('harina', 18).
 tengo('bizcochuelo', 0).
@@ -14,6 +14,7 @@ tengo('dulce de leche', 0).
 tengo('tomate', 16).
 tengo('huevo', 15).
 tengo('caramelo', 0).
+tengo('fuego', 4).
 tengo('matambre a la pizza', 0).
 tengo('hamburguesa', 0).
 tengo('masa', 0).
@@ -23,6 +24,7 @@ tengo('salsa de tomate', 0).
 tengo('levadura', 15).
 tengo('torta', 0).
 tengo('papa', 20).
+tengo('masa madre', 3).
 tengo('sal', 20).
 tengo('relleno de empanada', 0).
 tengo('flan', 0).

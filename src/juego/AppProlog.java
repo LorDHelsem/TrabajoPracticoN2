@@ -7,11 +7,11 @@ public class AppProlog {
 	public static void main(String[] args) throws IOException {
 		// Preparamos los datos
 		ParseoJson parser = new ParseoJson();
-		parser.cargarRecetasDesdeJSON("archivosJson/recetas.json");
+		parser.cargarRecetasDesdeJSON("archivosJSON/recetas.json");
 
 		Inventario inventarioJugador = new Inventario();
 		parser.inicializarInventario(inventarioJugador);
-		parser.cargarInventarioDesdeArchivoJSON(inventarioJugador,"archivosJson/inventario.json");
+		parser.cargarInventarioDesdeArchivoJSON(inventarioJugador, "archivosJSON/inventario.json");
 
 		// Creamos el archivo
 		PrologConector prolog = new PrologConector();
@@ -25,6 +25,7 @@ public class AppProlog {
 			for (String p : productos) {
 				System.out.println("- " + p);
 			}
+			System.out.println("Puedo hacer salsa de tomate ? R: "+ (prolog.puedoHacer("salsa de tomate") == true?"SI":"NO"));
 		} else {
 			System.out.println("Error al cargar archivo Prolog.");
 		}

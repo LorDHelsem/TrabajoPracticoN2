@@ -12,17 +12,18 @@ public class AppNew {
 
 		Ingrediente resultado = parser.getIngredienteFinal("empanada de carne");
 
-        //Para mostrar al usuario todos los nombres de ingredientes disponibles.
+		// Para mostrar al usuario todos los nombres de ingredientes disponibles.
 		System.out.println("Lista completa de ingredientes:");
 		for (Ingrediente ing : parser.getTodos()) {
 			System.out.println("- " + ing.getNombre());
 		}
 
-		// Para saber qué recetas tiene el sistema y generar un menú dinámico o una interfaz de selección.
+		// Para saber qué recetas tiene el sistema y generar un menú dinámico o una
+		// interfaz de selección.
 		System.out.println("\n\nRecetas cargadas:");
 		for (Receta r : parser.getRecetas()) {
 			// System.out.println("- " + r.getNombre());
-			System.out.println("-  " + r.getIngredientesBasicosComoString());
+			System.out.println("-  " + r.getIngredienteCompleto());
 		}
 
 		if (resultado instanceof IngredienteIntermedio) {
@@ -55,7 +56,7 @@ public class AppNew {
 		// Mostrar inventario recién creado
 		inventarioJugador.mostrarInventario();
 
-		parser.cargarInventarioDesdeArchivoJSON(inventarioJugador,"archivosJson/inventario.json"); // Carga cantidades
+		parser.cargarInventarioDesdeArchivoJSON(inventarioJugador, "archivosJson/inventario.json"); // Carga cantidades
 
 		// Mostrar inventario recién cargado
 		inventarioJugador.mostrarInventarioDisponible();
