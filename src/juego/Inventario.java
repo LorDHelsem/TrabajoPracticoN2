@@ -22,7 +22,8 @@ public class Inventario {
 
 		System.out.println("Contenido del inventario:");
 		for (Map.Entry<Item, Integer> entry : objetos.entrySet()) {
-			System.out.println("- " + entry.getKey().getNombre() + ": " + entry.getValue());
+			System.out.println(String.format("%-2d", entry.getValue()) + " x "
+					+ String.format("%-40s", entry.getKey().getNombre()));
 		}
 	}
 
@@ -43,7 +44,8 @@ public class Inventario {
 		System.out.println("Inventario Disponible:");
 		for (Map.Entry<Item, Integer> entry : objetos.entrySet()) {
 			if (entry.getValue() > 0) {
-				System.out.println("- " + entry.getKey().getNombre() + ": " + entry.getValue());
+				System.out.println(String.format("%-2d", entry.getValue()) + " x "
+						+ String.format("%-40s", entry.getKey().getNombre()));
 			}
 		}
 	}

@@ -19,9 +19,8 @@ public class Menu {
 	public void mostrarMenu() {
 		Scanner scanner = new Scanner(System.in);
 		int opcion;
-
+		String opc;
 		do {
-
 			// limpiarConsola();
 			System.out.println("------ MENÚ PRINCIPAL ------");
 			System.out.println("1. Mostrar inventario completo");
@@ -38,59 +37,64 @@ public class Menu {
 			System.out.println("12. Craftear ingrediente (con catalizador)");
 			System.out.println("0. Salir");
 			System.out.print("Elige una opción: ");
-			opcion = scanner.nextInt();
-			scanner.nextLine();
+			// opcion = scanner.nextInt();
+			opc = scanner.nextLine();
+			// scanner.nextLine();
 
-			switch (opcion) {
-			case 1:
+			switch (opc) {
+			case "1":
 				limpiarConsola();
 				inventario.mostrarInventario();
+				pausar(scanner);
+				limpiarConsola();
 				break;
-			case 2:
+			case "2":
 				limpiarConsola();
 				inventario.mostrarInventarioDisponible();
+				pausar(scanner);
+				limpiarConsola();
 				break;
-			case 3:
+			case "3":
 				limpiarConsola();
 				mostrarTodasLasRecetas(scanner);
 				break;
-			case 4:
+			case "4":
 				limpiarConsola();
 				mostrarIngredienteDeReceta(scanner);
 				break;
-			case 5:
+			case "5":
 				limpiarConsola();
 				mostrarIngredienteBasicoDeReceta(scanner);
 				break;
-			case 6:
+			case "6":
 				limpiarConsola();
 				mostrarArbolDeCrafteo(scanner);
 				break;
-			case 7:
+			case "7":
 				limpiarConsola();
 				queIngredientesFaltanParaReceta(scanner);
 				break;
-			case 8:
+			case "8":
 				limpiarConsola();
 				queIngredientesBasicosFaltanParaReceta(scanner);
 				break;
-			case 9:
+			case "9":
 				limpiarConsola();
 				cantCrafteosPosiblesParaReceta(scanner);
 				break;
-			case 10:
+			case "10":
 				limpiarConsola();
 				posiblesCrafteos(scanner);
 				break;
-			case 11:
+			case "11":
 				limpiarConsola();
 				craftearSinCatalizador(scanner);
 				break;
-			case 12:
+			case "12":
 				limpiarConsola();
 				craftearConCatalizador(scanner);
 				break;
-			case 0:
+			case "0":
 				limpiarConsola();
 				parser.guardarInventarioActual(this.inventario);
 				System.out.println("¡Juego finalizado!");
@@ -98,11 +102,13 @@ public class Menu {
 			default:
 				limpiarConsola();
 				System.out.println("Opción inválida.");
+				pausar(scanner);
+				limpiarConsola();
 				break;
 
 			}
 
-		} while (opcion != 0);
+		} while (!opc.equals("0"));
 	}
 
 	private void cantCrafteosPosiblesParaReceta(Scanner scanner) {
@@ -110,6 +116,7 @@ public class Menu {
 		System.out.print("Ingrese nombre de receta: ");
 		String nombre = scanner.nextLine();
 		Receta receta = parser.getRecetaPorNombre(nombre);
+		limpiarConsola();
 		Inventario invduplicado = new Inventario();
 		for (Entry<Item, Integer> entry : (this.inventario.getObjetos()).entrySet()) {
 			invduplicado.agregarItem(entry);
@@ -127,6 +134,8 @@ public class Menu {
 		} else {
 			System.out.println("Receta no encontrada.");
 		}
+		pausar(scanner);
+		limpiarConsola();
 	}
 
 	private void mostrarTodasLasRecetas(Scanner scanner) {

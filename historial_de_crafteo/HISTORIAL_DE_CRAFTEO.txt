@@ -58,3 +58,57 @@ Receta: salsa de tomate
 Cantidad producida: 2
 Tiempo de crafteo: 8.0 min
 
+2025-06-30 16:24:55
+Jugador: s
+Receta: salsa de tomate
+Cantidad producida: 2
+Tiempo de crafteo: 8.0 min
+
+2025-06-30 16:32:28
+Jugador: s
+Receta: papas fritas
+Cantidad producida: 2
+Tiempo de crafteo: 2.0 min
+
+2025-06-30 16:34:28
+Jugador: s
+Receta: papas fritas
+Cantidad producida: 2
+Tiempo de crafteo: 2.0 min
+
+2025-06-30 16:35:11
+Jugador: sd
+Receta: masa
+Cantidad producida: 2
+Tiempo de crafteo: 5.0 min
+
+2025-06-30 16:40:11
+Jugador: sd
+Receta: masa
+Cantidad producida: 2
+Tiempo de crafteo: 5.0 min
+
+2025-06-30 16:45:11
+Jugador: sd
+Receta: masa
+Cantidad producida: 2
+Tiempo de crafteo: 5.0 min
+
+2025-06-30 16:50:11
+Jugador: sd
+Receta: masa
+Cantidad producida: 2
+Tiempo de crafteo: 5.0 min
+
+2025-06-30 16:55:11
+Jugador: sd
+Receta: masa
+Cantidad producida: 2
+Tiempo de crafteo: 5.0 min
+
+2025-06-30 17:00:11
+Jugador: sd
+Receta: masa
+Cantidad producida: 2
+Tiempo de crafteo: 5.0 min
+
