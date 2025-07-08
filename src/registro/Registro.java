@@ -1,4 +1,4 @@
-package juego;
+package registro;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -16,7 +16,7 @@ public class Registro {
 	private static final String NOMBRE = "HISTORIAL_DE_CRAFTEO.txt";
 	private FileWriter fileArch = null;
 	private PrintWriter printWriter = null;
-	private LocalDateTime tiempoEnElJuego;
+	private LocalDateTime tiempoEnElJuego; 
 
 	public Registro() {
 		super();

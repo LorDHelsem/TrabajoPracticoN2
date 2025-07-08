@@ -1,11 +1,13 @@
-package juego;
+package catalizador;
+
+import receta.Receta;
 
 public class CatalizadorMasaMadre extends Catalizador{
 
 	public CatalizadorMasaMadre(String nombre) {
 		super(nombre);
 	}
-	
+	 
 	@Override 
 	public void aplicarEfecto(Receta receta) {
 		receta.setCantidadProducida(receta.getCantidadProducida()*3);

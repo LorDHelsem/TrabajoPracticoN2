@@ -1,4 +1,4 @@
-package juego;
+package prolog;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -11,7 +11,13 @@ import org.jpl7.Query;
 import org.jpl7.Term;
 import org.jpl7.Variable;
 
-public class PrologConector {
+import ingrediente.Ingrediente;
+import inventario.Inventario;
+import item.Item;
+import parseoJson.ParseoJson;
+import receta.Receta;
+
+public class PrologConector { 
 
 	public void crearArchivoPL(String ruta, Inventario inventario, ParseoJson parser) throws IOException {
 		BufferedWriter writer = new BufferedWriter(new FileWriter(ruta));
@@ -28,7 +34,7 @@ public class PrologConector {
 		// Escribir hechos de las recetas
 		for (Receta receta : parser.getRecetas()) {
 			String nombreReceta = receta.getNombre();
-			for (Map.Entry<Ingrediente, java.lang.Integer> ingrediente : receta.getIngredientes2().entrySet()) {
+			for (Map.Entry<Ingrediente, java.lang.Integer> ingrediente : receta.getIngredientesMap().entrySet()) {
 				writer.write("ingrediente('" + nombreReceta + "', '" + ingrediente.getKey() + "', "
 						+ ingrediente.getValue() + ").\n");
 			}
@@ -60,7 +66,7 @@ public class PrologConector {
 
 	// Ejecutar consulta Prolog
 	public boolean puedoHacer(String producto) {
-		Query consulta = new Query("puedo_hacer(" + producto + ").");
+		Query consulta = new Query("puedo_hacer(" + "'" + producto + "'" + ").");
 		return consulta.hasSolution();
 	}
 

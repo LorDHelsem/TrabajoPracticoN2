@@ -1,4 +1,4 @@
-package juego;
+package parseoJson;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -19,7 +19,16 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-public class ParseoJson {
+import catalizador.CatalizadorFuego;
+import catalizador.CatalizadorMasaMadre;
+import ingrediente.Ingrediente;
+import ingrediente.IngredienteBasico;
+import ingrediente.IngredienteIntermedio;
+import inventario.Inventario;
+import item.Item;
+import receta.Receta;
+ 
+public class ParseoJson { 
 
 	private Map<String, Ingrediente> ingredientesMap = new HashMap<>();
 	private Map<String, JsonObject> recetasPendientes = new HashMap<>();
@@ -44,9 +53,6 @@ public class ParseoJson {
 				getIngrediente(nombre); // ← Construcción recursiva
 			}
 
-			// System.out.println("Se cargaron " + ingredientesMap.size() + " ingredientes
-			// correctamente.");
-
 		} catch (IOException e) {
 			System.err.println("Error al leer el archivo: " + e.getMessage());
 		} catch (Exception e) {
@@ -55,7 +61,6 @@ public class ParseoJson {
 		}
 	}
 
-	// Construye un ingrediente (básico o intermedio), recursivamente
 	// Construye un ingrediente (básico o intermedio), recursivamente
 	private Ingrediente getIngrediente(String nombre) {
 		if (ingredientesMap.containsKey(nombre)) {

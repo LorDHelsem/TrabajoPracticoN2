@@ -1,13 +1,15 @@
-package juego;
+package ingrediente;
 
 import java.util.Map;
+
+import receta.Receta;
 
 public class IngredienteIntermedio extends Ingrediente {
 	private Receta receta;
 
 	public IngredienteIntermedio(String nombre, Receta receta) {
 		super(nombre);
-		this.receta = receta;
+		this.receta = receta; 
 	}
 
 	public Receta getReceta() {
@@ -19,18 +21,14 @@ public class IngredienteIntermedio extends Ingrediente {
 	}
 
 	public String getRecetaCompleta() {
-		return this.receta.getIngredienteCompleto();
+		return this.receta.getIngredienteCompleto(); 
 	}
-
-//	public String getRecetaCompleta(Integer cant) {
-//		return this.receta.getIngredienteCompleto(cant);
-//	}
 
 	public String getArbolCompleto() {
 		return this.receta.getArbolDeCrafteo();
 	}
 
-	protected String getArbolCompleto(Integer cant, Integer cantTabs) {
+	public String getArbolCompleto(Integer cant, Integer cantTabs) {
 		return this.receta.getArbolDeCrafteo(cant, cantTabs);
 	}
 
@@ -47,7 +45,6 @@ public class IngredienteIntermedio extends Ingrediente {
 		return false;
 	}
 
-	@Override
 	public Map<String, Integer> getIngredientesBasicosTotales(int cantidad) {
 		return receta.getIngredientesBasicosTotales(cantidad);
 	}

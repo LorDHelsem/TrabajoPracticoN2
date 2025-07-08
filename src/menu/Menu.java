@@ -1,7 +1,17 @@
-package juego;
+package menu;
 
 import java.io.IOException;
 import java.util.Map.Entry;
+
+import catalizador.Catalizador;
+import inventario.Inventario;
+import item.Item;
+import jugador.Jugador;
+import parseoJson.ParseoJson;
+import prolog.PrologConector;
+import receta.Receta;
+import registro.Registro;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,94 +23,77 @@ public class Menu {
 	public Menu(Jugador jugador, Inventario inventario, ParseoJson parser, Registro registro) {
 		this.jugador = jugador;
 		this.inventario = inventario;
-		this.parser = parser;
+		this.parser = parser; 
 	}
 
 	public void mostrarMenu() {
 		Scanner scanner = new Scanner(System.in);
-		int opcion;
 		String opc;
 		do {
-			// limpiarConsola();
 			System.out.println("------ MENÚ PRINCIPAL ------");
 			System.out.println("1. Mostrar inventario completo");
 			System.out.println("2. Mostrar inventario disponible");
-			System.out.println("3. Mostrar todos los Ingredientes con Receta asociada");
-			System.out.println("4. ¿Qué necesito para craftear un ingrediente?");
-			System.out.println("5. ¿Qué necesito para craftear un ingrediente desde cero?");
+			System.out.println("3. Mostrar todos los Ingredientes con Receta asociada"); //7
+			System.out.println("4. ¿Qué necesito para craftear un ingrediente? - Primer nivel");//1
+			System.out.println("5. ¿Qué necesito para craftear un ingrediente desde cero?");//2
 			System.out.println("6. Mostrar el árbol de crafteo para un Ingrediente");
-			System.out.println("7. ¿Qué me falta para craftear un Ingrediente?");
-			System.out.println("8. ¿Qué me falta para craftear un Ingrediente desde cero?");
-			System.out.println("9. ¿Cuántos ingredientes puedo craftear?");
-			System.out.println("10. ¿Qué ingredientes puedo craftear?");
+			System.out.println("7. ¿Qué me falta para craftear un Ingrediente? - Primer nivel");//3
+			System.out.println("8. ¿Qué me falta para craftear un Ingrediente desde cero?");//4
+			System.out.println("9. ¿Cuánto puedo craftear con todo el inventario?");//5
+			System.out.println("10. Prolog - ¿Qué ingredientes puedo craftear?");
 			System.out.println("11. Craftear ingrediente (sin catalizador)");
 			System.out.println("12. Craftear ingrediente (con catalizador)");
 			System.out.println("0. Salir");
 			System.out.print("Elige una opción: ");
-			// opcion = scanner.nextInt();
 			opc = scanner.nextLine();
-			// scanner.nextLine();
 
+			limpiarConsola();
 			switch (opc) {
 			case "1":
-				limpiarConsola();
-				inventario.mostrarInventario();
+				inventario.mostrarInventario(); 
 				pausar(scanner);
 				limpiarConsola();
 				break;
 			case "2":
-				limpiarConsola();
 				inventario.mostrarInventarioDisponible();
 				pausar(scanner);
 				limpiarConsola();
 				break;
 			case "3":
-				limpiarConsola();
 				mostrarTodasLasRecetas(scanner);
 				break;
 			case "4":
-				limpiarConsola();
 				mostrarIngredienteDeReceta(scanner);
 				break;
 			case "5":
-				limpiarConsola();
 				mostrarIngredienteBasicoDeReceta(scanner);
 				break;
 			case "6":
-				limpiarConsola();
 				mostrarArbolDeCrafteo(scanner);
 				break;
 			case "7":
-				limpiarConsola();
 				queIngredientesFaltanParaReceta(scanner);
 				break;
 			case "8":
-				limpiarConsola();
 				queIngredientesBasicosFaltanParaReceta(scanner);
 				break;
 			case "9":
-				limpiarConsola();
 				cantCrafteosPosiblesParaReceta(scanner);
 				break;
 			case "10":
-				limpiarConsola();
 				posiblesCrafteos(scanner);
 				break;
 			case "11":
-				limpiarConsola();
 				craftearSinCatalizador(scanner);
 				break;
 			case "12":
-				limpiarConsola();
 				craftearConCatalizador(scanner);
 				break;
 			case "0":
-				limpiarConsola();
 				parser.guardarInventarioActual(this.inventario);
 				System.out.println("¡Juego finalizado!");
 				break;
 			default:
-				limpiarConsola();
 				System.out.println("Opción inválida.");
 				pausar(scanner);
 				limpiarConsola();
@@ -279,16 +272,6 @@ public class Menu {
 
 	public void limpiarConsola() {
 		System.out.println("\n".repeat(50));
-//		try {
-//			if (System.getProperty("os.name").contains("Windows")) {
-//				new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-//			} else {
-//				System.out.print("\033[H\033[2J");
-//				System.out.flush();
-//			}
-//		} catch (Exception e) {
-//			System.out.println("\n".repeat(50));
-//		}
 	}
 
 	private void pausar(Scanner scanner) {

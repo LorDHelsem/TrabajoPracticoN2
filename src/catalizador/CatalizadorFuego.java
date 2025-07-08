@@ -1,9 +1,11 @@
-package juego;
+package catalizador;
+
+import receta.Receta;
 
 public class CatalizadorFuego extends Catalizador {
 
 	public CatalizadorFuego(String nombre) {
-		super(nombre);
+		super(nombre); 
 	}
 
 	@Override

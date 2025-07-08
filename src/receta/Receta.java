@@ -1,7 +1,11 @@
-package juego;
+package receta;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import ingrediente.Ingrediente;
+import ingrediente.IngredienteIntermedio;
+import inventario.Inventario;
 
 public class Receta {
 	private String nombre;
@@ -9,9 +13,9 @@ public class Receta {
 	private double tiempoTotal;
 	private double tiempoDeCrafteo;
 	private String tipoCatalizador;
-	private int cantidadProducida = 1;
+	private int cantidadProducida = 1; 
 
-	@SafeVarargs
+	@SafeVarargs 
 	public Receta(String nombre, String tipoCatalizador, int cantidadProducida, double tiempo,
 			Map.Entry<Ingrediente, Integer>... ingredientes) {
 		this.ingredientes = new HashMap<>();
@@ -101,7 +105,7 @@ public class Receta {
 		return retorno.toString();
 	}
 
-	public Map<Ingrediente, Integer> getIngredientes2() {
+	public Map<Ingrediente, Integer> getIngredientesMap() {
 		return ingredientes;
 	}
 
@@ -113,7 +117,7 @@ public class Receta {
 		return retorno.toString();
 	}
 
-	protected String getArbolDeCrafteo(Integer cant, Integer cantTabs) {
+	public String getArbolDeCrafteo(Integer cant, Integer cantTabs) {
 		StringBuilder retorno = new StringBuilder();
 		for (Map.Entry<Ingrediente, Integer> entry : this.ingredientes.entrySet()) {
 			Ingrediente ingrediente = entry.getKey();
@@ -172,28 +176,6 @@ public class Receta {
 		return total;
 	}
 
-//	public String getIngredientesBasicosComoString() {
-//
-//	}
-
-	// -------------------------------
-
-//	public String getIngredienteCompleto(Integer cant) {
-//		StringBuilder retorno = new StringBuilder();
-//		for (Map.Entry<Ingrediente, Integer> entry : this.ingredientes.entrySet()) {
-//			Ingrediente ingrediente = entry.getKey();
-//			Integer cantidad = entry.getValue();
-//
-//			if (ingrediente.esIngredienteBasico()) {
-//				retorno.append("\t" + ingrediente.getNombre() + " " + cantidad * cant + "\n");
-//
-//			} else {
-//				retorno.append(((IngredienteIntermedio) ingrediente).getRecetaCompleta(cantidad * cant));
-//			}
-//		}
-//		return retorno.toString();
-//	}
-
 	public void setCantidadProducida(int cantidadProducida) {
 		this.cantidadProducida = cantidadProducida;
 	}
@@ -204,17 +186,6 @@ public class Receta {
 
 	public void setTiempoDeCrafteo(double tiempoDeCrafteo) {
 		this.tiempoDeCrafteo = tiempoDeCrafteo;
-	}
-
-	@Override
-	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("Receta: ").append(nombre).append("\n");
-		sb.append("Tiempo: ").append(tiempoDeCrafteo).append(" min\n");
-		sb.append("Ingredientes:\n");
-		ingredientes
-				.forEach((ing, cant) -> sb.append("- ").append(ing.getNombre()).append(": ").append(cant).append("\n"));
-		return sb.toString();
 	}
 
 }

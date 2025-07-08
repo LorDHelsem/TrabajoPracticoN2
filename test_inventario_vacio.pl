@@ -1,36 +1,3 @@
-tengo('empanada de carne', 0).
-tengo('azúcar', 18).
-tengo('pizza muzzarella', 0).
-tengo('harina', 18).
-tengo('bizcochuelo', 0).
-tengo('leche', 16).
-tengo('carne', 17).
-tengo('huevo frito', 0).
-tengo('queso', 0).
-tengo('papas fritas', 0).
-tengo('asado', 0).
-tengo('flan con caramelo', 0).
-tengo('dulce de leche', 0).
-tengo('tomate', 16).
-tengo('huevo', 15).
-tengo('omelette', 1).
-tengo('caramelo', 0).
-tengo('fuego', 4).
-tengo('matambre a la pizza', 0).
-tengo('hamburguesa', 0).
-tengo('masa', 0).
-tengo('merengue', 0).
-tengo('matambre a la pizza con fritas', 0).
-tengo('salsa de tomate', 0).
-tengo('levadura', 15).
-tengo('torta', 0).
-tengo('papa', 20).
-tengo('masa madre', 0).
-tengo('sal', 20).
-tengo('relleno de empanada', 0).
-tengo('flan', 0).
-tengo('pan', 0).
-tengo('aceite', 19).
 
 ingrediente('relleno de empanada', 'huevo', 2).
 ingrediente('relleno de empanada', 'carne', 1).
@@ -42,8 +9,6 @@ ingrediente('masa', 'aceite', 1).
 ingrediente('empanada de carne', 'masa', 1).
 ingrediente('empanada de carne', 'relleno de empanada', 1).
 ingrediente('empanada de carne', 'aceite', 1).
-ingrediente('omelette', 'huevo', 15).
-ingrediente('omelette', 'sal', 1).
 ingrediente('salsa de tomate', 'tomate', 3).
 ingrediente('salsa de tomate', 'aceite', 1).
 ingrediente('queso', 'leche', 2).
@@ -88,10 +53,6 @@ ingrediente('flan', 'azúcar', 1).
 ingrediente('flan', 'leche', 2).
 ingrediente('flan con caramelo', 'caramelo', 1).
 ingrediente('flan con caramelo', 'flan', 1).
-ingrediente('pan', 'huevo', 2).
-ingrediente('pan', 'levadura', 1).
-ingrediente('pan', 'harina', 1).
-ingrediente('pan', 'sal', 1).
 
 % Para verificar si tengo suficientes unidades de un ingrediente básico
 suficiente(Ingrediente, CantidadNecesaria) :-

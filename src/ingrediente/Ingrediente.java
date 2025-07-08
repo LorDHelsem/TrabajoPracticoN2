@@ -1,12 +1,14 @@
-package juego;
+package ingrediente;
 
 import java.util.Map;
+
+import item.Item;
 
 public abstract class Ingrediente extends Item {
 
 	public Ingrediente(String nombre) {
 		super(nombre);
-	}
+	} 
 
 	public abstract Boolean esIngredienteBasico();
 
@@ -14,7 +16,5 @@ public abstract class Ingrediente extends Item {
 	public String toString() {
 		return getNombre();
 	}
-
-	public abstract Map<String, Integer> getIngredientesBasicosTotales(int cantidad);
 
 }

@@ -1,6 +1,12 @@
-package juego;
+package appJuego;
 
 import java.util.Scanner;
+
+import inventario.Inventario;
+import jugador.Jugador;
+import menu.Menu;
+import parseoJson.ParseoJson;
+import registro.Registro; 
 
 public class AppJuego {
 
@@ -12,7 +18,7 @@ public class AppJuego {
 		System.out.print("Por favor, ingresá tu nombre: ");
 		String nombreJugador = scanner.nextLine();
 
-		ParseoJson parser = new ParseoJson();
+		ParseoJson parser = new ParseoJson(); 
 		Inventario inventario = new Inventario();
 		Registro registro = new Registro();
 

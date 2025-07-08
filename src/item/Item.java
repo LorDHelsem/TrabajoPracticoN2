@@ -1,12 +1,12 @@
-package juego;
+package item;
 
 import java.util.Objects;
 
 public abstract class Item {
-	protected String nombre;
+	private String nombre;
 
 	public Item(String nombre) {
-		this.nombre = nombre;
+		this.nombre = nombre; 
 	}
 
 	public String getNombre() {

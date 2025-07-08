@@ -1,15 +1,19 @@
-package juego;
+package inventario;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Inventario {
+import catalizador.Catalizador;
+import ingrediente.Ingrediente;
+import item.Item;
+
+public class Inventario { 
 	private Map<Item, Integer> objetos;
 
 	public Inventario() {
 		this.objetos = new HashMap<>();
 	}
-
+ 
 	public void agregarItem(Map.Entry<Item, Integer> objeto) {
 		this.objetos.put(objeto.getKey(), this.objetos.getOrDefault(objeto.getKey(), 0) + objeto.getValue());
 	}

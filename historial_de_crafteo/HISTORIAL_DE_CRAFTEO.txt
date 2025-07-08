@@ -1,114 +1,60 @@
-2025-06-30 12:51:56
-Jugador: asd
-Receta: salsa de tomate
-Cantidad producida: 2
-Tiempo de crafteo: 8.0 min
-
-2025-06-30 12:59:56
-Jugador: asd
-Receta: papas fritas
-Cantidad producida: 2
-Tiempo de crafteo: 4.0 min
-
-2025-06-30 13:03:56
-Jugador: asd
-Receta: papas fritas
-Cantidad producida: 2
-Tiempo de crafteo: 2.0 min
-
-2025-06-30 13:05:56
-Jugador: asd
-Receta: papas fritas
-Cantidad producida: 2
-Tiempo de crafteo: 2.0 min
-
-2025-06-30 15:43:48
-Jugador: Jordi
-Receta: masa
-Cantidad producida: 6
-Tiempo de crafteo: 5.0 min
-
-2025-06-30 15:48:02
-Jugador: 4+
-Receta: salsa de tomate
-Cantidad producida: 2
-Tiempo de crafteo: 8.0 min
-
-2025-06-30 15:56:02
-Jugador: 4+
-Receta: salsa de tomate
-Cantidad producida: 2
-Tiempo de crafteo: 8.0 min
-
-2025-06-30 16:04:02
-Jugador: 4+
-Receta: salsa de tomate
-Cantidad producida: 2
-Tiempo de crafteo: 8.0 min
-
-2025-06-30 16:12:02
-Jugador: 4+
-Receta: salsa de tomate
-Cantidad producida: 2
-Tiempo de crafteo: 8.0 min
-
-2025-06-30 16:20:02
-Jugador: 4+
-Receta: salsa de tomate
-Cantidad producida: 2
-Tiempo de crafteo: 8.0 min
-
-2025-06-30 16:24:55
-Jugador: s
-Receta: salsa de tomate
-Cantidad producida: 2
-Tiempo de crafteo: 8.0 min
-
-2025-06-30 16:32:28
-Jugador: s
-Receta: papas fritas
-Cantidad producida: 2
-Tiempo de crafteo: 2.0 min
-
-2025-06-30 16:34:28
-Jugador: s
-Receta: papas fritas
-Cantidad producida: 2
-Tiempo de crafteo: 2.0 min
-
-2025-06-30 16:35:11
-Jugador: sd
+2025-07-08 11:37:48
+Jugador: mm
 Receta: masa
 Cantidad producida: 2
 Tiempo de crafteo: 5.0 min
 
-2025-06-30 16:40:11
-Jugador: sd
-Receta: masa
+2025-07-08 11:42:48
+Jugador: mm
+Receta: salsa de tomate
 Cantidad producida: 2
+Tiempo de crafteo: 8.0 min
+
+2025-07-08 11:40:01
+Jugador: mel
+Receta: pan
+Cantidad producida: 1
 Tiempo de crafteo: 5.0 min
 
-2025-06-30 16:45:11
-Jugador: sd
-Receta: masa
-Cantidad producida: 2
+2025-07-08 11:40:01
+Jugador: mel
+Receta: huevo frito
+Cantidad producida: 1
+Tiempo de crafteo: 1.0 min
+
+2025-07-08 11:40:01
+Jugador: mel
+Receta: omelette
+Cantidad producida: 1
 Tiempo de crafteo: 5.0 min
 
-2025-06-30 16:50:11
-Jugador: sd
-Receta: masa
+2025-07-08 11:40:01
+Jugador: mel
+Receta: salsa de tomate
 Cantidad producida: 2
+Tiempo de crafteo: 8.0 min
+
+2025-07-08 11:52:37
+Jugador: mel
+Receta: pan
+Cantidad producida: 1
 Tiempo de crafteo: 5.0 min
 
-2025-06-30 16:55:11
-Jugador: sd
-Receta: masa
-Cantidad producida: 2
+2025-07-08 11:52:37
+Jugador: mel
+Receta: huevo frito
+Cantidad producida: 1
+Tiempo de crafteo: 1.0 min
+
+2025-07-08 11:52:37
+Jugador: mel
+Receta: omelette
+Cantidad producida: 1
 Tiempo de crafteo: 5.0 min
 
-2025-06-30 17:00:11
-Jugador: sd
-Receta: masa
+2025-07-08 11:52:37
+Jugador: mel
+Receta: salsa de tomate
 Cantidad producida: 2
-Tiempo de crafteo: 5.0 min
+Tiempo de crafteo: 8.0 min
 

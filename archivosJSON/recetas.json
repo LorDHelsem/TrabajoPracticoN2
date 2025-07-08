@@ -40,7 +40,7 @@
         "item": "masa",
         "cantidad": 2
       },
-      "tipo_catalizador": "masa_madre"
+      "tipo_catalizador": "masa madre"
     },
     {
       "nombre": "salsa de tomate",
@@ -421,6 +421,52 @@
       "tiempo_crafteo_minutos": 5,
       "produce": {
         "item": "empanada de carne",
+        "cantidad": 1
+      },
+      "tipo_catalizador": "fuego"
+    },
+    {
+      "nombre": "pan",
+      "ingredientes": [
+        {
+          "item": "harina",
+          "cantidad": 1
+        },
+        {
+          "item": "sal",
+          "cantidad": 1
+        },
+        {
+          "item": "huevo",
+          "cantidad": 2
+        },
+        {
+          "item": "levadura",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 5,
+      "produce": {
+        "item": "pan",
+        "cantidad": 1
+      },
+      "tipo_catalizador": "masa madre"
+    },
+    {
+      "nombre": "omelette",
+      "ingredientes": [
+        {
+          "item": "huevo",
+          "cantidad": 15
+        },
+        {
+          "item": "sal",
+          "cantidad": 1
+        }
+      ],
+      "tiempo_crafteo_minutos": 5,
+      "produce": {
+        "item": "omelette",
         "cantidad": 1
       },
       "tipo_catalizador": "fuego"

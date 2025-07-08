@@ -11,6 +11,7 @@
 		"azúcar": 18,
 		"leche": 16,
 		"fuego": 4,
-		"masa madre": 3
+		"masa madre": 0,
+		"omelette": 1
 	}
 }
