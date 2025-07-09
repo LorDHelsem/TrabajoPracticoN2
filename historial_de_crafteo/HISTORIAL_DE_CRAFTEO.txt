@@ -58,3 +58,21 @@ Receta: salsa de tomate
 Cantidad producida: 2
 Tiempo de crafteo: 8.0 min
 
+2025-07-08 16:38:52
+Jugador: melina
+Receta: flan
+Cantidad producida: 1
+Tiempo de crafteo: 3.0 min
+
+2025-07-08 16:41:52
+Jugador: mel
+Receta: flan
+Cantidad producida: 1
+Tiempo de crafteo: 3.0 min
+
+2025-07-08 21:37:41
+Jugador: mel
+Receta: flan
+Cantidad producida: 1
+Tiempo de crafteo: 3.0 min
+

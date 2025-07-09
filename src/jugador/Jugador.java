@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import catalizador.Catalizador;
+import catalizador.CatalizadorDulce;
 import catalizador.CatalizadorFuego;
 import catalizador.CatalizadorMasaMadre;
 import ingrediente.Ingrediente;
@@ -89,7 +90,9 @@ public class Jugador {
 			// primero va catalizador != null
 			if ((receta.getTipoCatalizador().equals("fuego") && catalizador.getNombre().equals("fuego") && catalizador instanceof CatalizadorFuego)
 					|| (receta.getTipoCatalizador().equals("masa madre")
-						&& catalizador.getNombre().equals("masa madre") && catalizador instanceof CatalizadorMasaMadre)) {
+						&& catalizador.getNombre().equals("masa madre") && catalizador instanceof CatalizadorMasaMadre)
+					|| (receta.getTipoCatalizador().equals("dulce")
+							&& catalizador.getNombre().equals("dulce") && catalizador instanceof CatalizadorDulce)) {
 				
 				Integer cantidadActual = inventario.getObjetos().get(catalizador);
 				if (cantidadActual != null && cantidadActual > 0) {

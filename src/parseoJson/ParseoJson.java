@@ -19,6 +19,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import catalizador.CatalizadorDulce;
 import catalizador.CatalizadorFuego;
 import catalizador.CatalizadorMasaMadre;
 import ingrediente.Ingrediente;
@@ -210,6 +211,7 @@ public class ParseoJson {
 		
 		inventario.agregarItem(new AbstractMap.SimpleEntry<>(new CatalizadorFuego("fuego"), 0));
 		inventario.agregarItem(new AbstractMap.SimpleEntry<>(new CatalizadorMasaMadre("masa madre"), 0));
+		inventario.agregarItem(new AbstractMap.SimpleEntry<>(new CatalizadorDulce("dulce"), 0));
 	} 
 
 }

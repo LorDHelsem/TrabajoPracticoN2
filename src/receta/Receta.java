@@ -39,6 +39,13 @@ public class Receta {
 		this.tiempoTotal = Double.compare(tiempoAuxiliar, 0) == 0 ? tiempo : tiempoAuxiliar;
 	}
 
+	public void removerIngrediente(Ingrediente ingrediente) {
+	    if (ingredientes.containsKey(ingrediente)) {
+	        ingredientes.remove(ingrediente);
+	    }
+	}
+
+	
 	public String getNombre() {
 		return this.nombre;
 	}

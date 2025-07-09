@@ -2,15 +2,16 @@
   "elementos": {
     "azúcar": 18,
     "harina": 18,
-    "leche": 16,
+    "leche": 14,
     "carne": 17,
     "tomate": 16,
-    "huevo": 15,
+    "huevo": 11,
     "omelette": 1,
     "fuego": 4,
     "levadura": 15,
     "papa": 20,
     "sal": 20,
+    "flan": 1,
     "aceite": 19
   }
 }

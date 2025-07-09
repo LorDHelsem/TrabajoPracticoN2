@@ -219,7 +219,7 @@ public class Menu {
 		String nombre = scanner.nextLine();
 		Receta receta = parser.getRecetaPorNombre(nombre);
 		if (receta != null) {
-			System.out.print("Nombre del catalizador (fuego/masa madre): ");
+			System.out.print("Nombre del catalizador (fuego/masa madre/dulce): ");
 			String nombreCata = scanner.nextLine();
 			Catalizador catalizador = inventario.getCatalizador(nombreCata);
 			if (catalizador != null) {
